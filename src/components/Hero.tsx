@@ -63,37 +63,23 @@ const Hero = () => {
               transition={{ delay: 0.3 }}
               className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
             >
-              Stop Working{' '}
-              <span className="gradient-text">IN</span> Your Business.
-              <br />
-              Start Working{' '}
-              <span className="gradient-text">ON</span> It.
+              Your business.{' '}
+              <span className="gradient-text">Fully automated.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Custom AI automation systems that eliminate repetitive work, 
-              streamline operations, and unlock growth.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
-            >
-              From customer conversations to complex internal workflows — we design, 
-              build, and deploy AI systems tailored exactly to your business.
+              Custom AI workflows that eliminate manual work and unlock scale.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <a href="#services" className="btn-primary flex items-center justify-center gap-2">
