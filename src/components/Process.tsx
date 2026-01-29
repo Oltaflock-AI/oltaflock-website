@@ -5,32 +5,37 @@ const steps = [
   {
     icon: Search,
     number: '01',
-    title: 'Discovery',
-    description: 'We understand your workflows, bottlenecks, and growth goals through deep analysis.',
+    label: 'Analyze',
+    title: 'Discovery & Workflow Mapping',
+    description: 'We deeply analyze your workflows, tools, bottlenecks, and growth objectives to uncover high-ROI automation opportunities.',
   },
   {
     icon: PenTool,
     number: '02',
-    title: 'System Design',
-    description: 'We architect a custom AI + automation system tailored to your operations.',
+    label: 'Architect',
+    title: 'System Architecture & AI Design',
+    description: 'We design a production-grade AI + automation architecture tailored to your business logic, scale, and reliability needs.',
   },
   {
     icon: Code,
     number: '03',
-    title: 'Development',
-    description: 'We build robust AI pipelines, workflows, dashboards, and agents.',
+    label: 'Build',
+    title: 'Development & System Build',
+    description: 'We engineer robust AI pipelines, automation workflows, dashboards, and intelligent agents — built for performance, security, and scale.',
   },
   {
     icon: Rocket,
     number: '04',
-    title: 'Deployment',
-    description: 'We integrate everything seamlessly into your existing tools and systems.',
+    label: 'Launch',
+    title: 'Testing, Deployment & Integration',
+    description: 'We rigorously test, deploy, and integrate your system into existing tools to ensure reliability, accuracy, and zero disruption.',
   },
   {
     icon: TrendingUp,
     number: '05',
-    title: 'Optimization',
-    description: 'We continuously improve performance and maximize your ROI.',
+    label: 'Scale',
+    title: 'Optimization, Monitoring & Scale',
+    description: 'We continuously monitor, optimize, and evolve your automation systems to maximize ROI and support long-term growth.',
   },
 ];
 
@@ -76,9 +81,14 @@ const Process = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                         <step.icon className="text-primary" size={24} />
                       </div>
-                      <span className="font-display text-4xl font-bold text-primary/20">
-                        {step.number}
-                      </span>
+                      <div className="text-center">
+                        <span className="font-display text-4xl font-bold text-primary/20 block">
+                          {step.number}
+                        </span>
+                        <span className="text-xs font-medium text-primary/60 uppercase tracking-wider">
+                          {step.label}
+                        </span>
+                      </div>
                     </div>
                     <h3 className="font-display font-semibold text-xl mb-2 text-foreground">
                       {step.title}
