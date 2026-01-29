@@ -1,30 +1,43 @@
 import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { 
+  Layers, 
+  Sparkles, 
+  Shield, 
+  Workflow, 
+  TrendingUp, 
+  Lock 
+} from 'lucide-react';
 
 const features = [
   {
-    title: '100% Custom Systems',
-    description: 'No templates. Every solution is designed and built specifically for your business.',
+    icon: Layers,
+    title: 'System-First Architecture',
+    description: 'We design automation like infrastructure — not scripts. Our systems are modular, scalable, observable, and production-grade from day one.',
   },
   {
-    title: 'Industry-Agnostic Expertise',
-    description: 'We work across all industries, bringing diverse automation experience to your project.',
+    icon: Sparkles,
+    title: 'AI + Deterministic Workflow Fusion',
+    description: 'We blend AI intelligence with deterministic automation for reliability, safety, and predictability.',
   },
   {
-    title: 'End-to-End Automation',
-    description: 'From strategy to execution to optimization — we handle the entire automation journey.',
+    icon: Shield,
+    title: 'Production Reliability by Design',
+    description: 'Built to run 24/7 without breaking — engineered for uptime, fault tolerance, retries, monitoring, and resilience.',
   },
   {
-    title: 'AI + RPA Hybrid Systems',
-    description: 'Combining intelligent AI with robust process automation for maximum impact.',
+    icon: Workflow,
+    title: 'Business-Logic Driven Automation',
+    description: 'Your workflows define the system — not templates. Every automation mirrors your real operations and edge cases.',
   },
   {
-    title: 'Production-Grade Engineering',
-    description: 'Enterprise-quality systems built to scale, perform, and last.',
+    icon: TrendingUp,
+    title: 'Continuous Optimization Loop',
+    description: 'Your system improves every week through monitoring, performance tuning, and iterative upgrades.',
   },
   {
-    title: 'Scalable Infrastructure',
-    description: 'Systems designed to grow with your business without breaking or slowing down.',
+    icon: Lock,
+    title: 'Security, Compliance & Data Integrity',
+    description: 'Enterprise-grade security with encrypted data flows, access controls, and audit logging.',
   },
 ];
 
@@ -36,52 +49,43 @@ const WhyUs = () => {
       }} />
 
       <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-              Why Businesses Choose{' '}
-              <span className="gradient-text">Oltaflock</span>
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              We're not just another automation vendor. We're your strategic partner 
-              in building systems that transform how you operate.
-            </p>
-            <a href="#book-call" className="btn-primary inline-flex items-center gap-2">
-              <span>Start Your Transformation</span>
-            </a>
-          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+            How Oltaflock Builds Automation <br />
+            <span className="gradient-text">That Actually Works</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            Our engineering principles for building AI systems that scale, adapt, and perform in production.
+          </p>
+        </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card p-5 group hover:border-primary/30 transition-all"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="text-primary" size={14} />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">
-                      {feature.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="glass-card p-6 group hover:border-primary/30 transition-all"
+            >
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <feature.icon className="text-primary" size={24} />
+              </div>
+              <h3 className="font-display font-semibold text-lg text-foreground mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {feature.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
