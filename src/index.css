@@ -5,24 +5,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
+  /* Light theme (default) */
   :root {
-    --background: 222 47% 4%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
 
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 47% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 234 89% 60%;
+    --primary: 234 89% 55%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 222 47% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 9% 46%;
 
     --accent: 270 91% 65%;
     --accent-foreground: 210 40% 98%;
@@ -30,9 +31,9 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 47% 15%;
-    --input: 222 47% 15%;
-    --ring: 234 89% 60%;
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 234 89% 55%;
 
     --radius: 0.75rem;
 
@@ -41,7 +42,66 @@
     --electric-indigo: 239 84% 67%;
     --neon-purple: 270 91% 65%;
     --soft-cyan: 186 100% 69%;
-    --deep-navy: 222 47% 4%;
+    --deep-navy: 222 47% 11%;
+    --glass-white: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--royal-blue)), hsl(var(--electric-indigo)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--electric-indigo)), hsl(var(--neon-purple)));
+    --gradient-glow: linear-gradient(135deg, hsl(var(--neon-purple) / 0.5), hsl(var(--soft-cyan) / 0.5));
+    --gradient-radial: radial-gradient(circle at 50% 50%, hsl(var(--electric-indigo) / 0.1), transparent 70%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(var(--electric-indigo) / 0.2);
+    --shadow-card: 0 4px 24px hsl(222 47% 11% / 0.08);
+    --shadow-elevated: 0 8px 32px hsl(222 47% 11% / 0.12);
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 234 89% 55%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 87%;
+    --sidebar-ring: 234 89% 55%;
+  }
+
+  /* Dark theme */
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 234 89% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 222 47% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 47% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 270 91% 65%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 47% 18%;
+    --input: 222 47% 18%;
+    --ring: 234 89% 60%;
+
+    /* Custom brand colors - darker variants */
+    --royal-blue: 227 82% 28%;
+    --electric-indigo: 239 84% 67%;
+    --neon-purple: 270 91% 65%;
+    --soft-cyan: 186 100% 69%;
+    --deep-navy: 222 47% 8%;
     --glass-white: 0 0% 100%;
     
     /* Gradients */
@@ -55,13 +115,13 @@
     --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.2);
     --shadow-elevated: 0 8px 32px hsl(0 0% 0% / 0.3);
 
-    --sidebar-background: 222 47% 7%;
+    --sidebar-background: 222 47% 11%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 234 89% 60%;
     --sidebar-primary-foreground: 210 40% 98%;
-    --sidebar-accent: 222 47% 15%;
+    --sidebar-accent: 222 47% 18%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 222 47% 15%;
+    --sidebar-border: 222 47% 18%;
     --sidebar-ring: 234 89% 60%;
   }
 }

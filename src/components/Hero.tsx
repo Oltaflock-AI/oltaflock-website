@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, Bot } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Bot, BadgeCheck } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -155,12 +155,13 @@ const Hero = () => {
                 animate={{ y: [0, -18, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >
-                <div className="space-y-2">
-                  <p className="text-sm font-medium text-foreground">Lead Qualified</p>
-                  <div className="flex gap-1">
-                    {[1,2,3,4,5].map((i) => (
-                      <div key={i} className="w-2 h-8 rounded-full bg-primary/30" style={{ height: `${20 + i * 8}px` }} />
-                    ))}
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-soft-cyan/20 flex items-center justify-center">
+                    <BadgeCheck className="text-soft-cyan" size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">Lead Qualified</p>
+                    <p className="text-xs text-muted-foreground">Scored + routed</p>
                   </div>
                 </div>
               </motion.div>
