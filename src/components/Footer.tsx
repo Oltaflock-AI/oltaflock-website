@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Instagram, Facebook } from 'lucide-react';
 import logo from '@/assets/oltaflock-logo.png';
 
 const Footer = () => {
@@ -57,22 +57,28 @@ const Footer = () => {
             className="flex items-center justify-center md:justify-end gap-4"
           >
             <a 
-              href="mailto:hello@oltaflock.ai" 
+              href="https://www.instagram.com/oltaflock.ai/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
             >
-              <Mail size={18} className="text-muted-foreground" />
+              <Instagram size={18} className="text-muted-foreground" />
             </a>
             <a 
-              href="#" 
-              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
-            >
-              <Twitter size={18} className="text-muted-foreground" />
-            </a>
-            <a 
-              href="#" 
+              href="https://www.linkedin.com/company/oltaflock-ai" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
             >
               <Linkedin size={18} className="text-muted-foreground" />
+            </a>
+            <a 
+              href="https://www.facebook.com/profile.php?id=61585295918151" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+            >
+              <Facebook size={18} className="text-muted-foreground" />
             </a>
           </motion.div>
         </div>
