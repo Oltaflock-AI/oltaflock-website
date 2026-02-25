@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Calendar, ArrowRight } from 'lucide-react';
+import { Send, MessageSquare, ArrowRight, Loader2 } from 'lucide-react';
+import { toast } from 'sonner';
+
+const CONTACT_EMAIL = 'admin@oltaflock.ai';
+
+const getApiBase = () => {
+  if (import.meta.env.VITE_API_URL) return import.meta.env.VITE_API_URL;
+  return ''; // same origin when deployed (e.g. Vercel)
+};
 
 const BookCall = () => {
   const [formData, setFormData] = useState({
@@ -9,17 +17,35 @@ const BookCall = () => {
     email: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    try {
+      const res = await fetch(`${getApiBase()}/api/send-message`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        toast.error(data.error || 'Failed to send message. Try again or email us directly.');
+        return;
+      }
+      toast.success('Message sent! We\'ll get back to you within 24 hours.');
+      setFormData({ name: '', company: '', email: '', message: '' });
+    } catch {
+      toast.error('Could not send message. Check your connection or email us at ' + CONTACT_EMAIL);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section id="book-call" className="py-24 relative">
+    <section id="send-message" className="py-24 relative">
       <div className="absolute inset-0" style={{
-        backgroundImage: 'radial-gradient(circle at 50% 50%, hsl(234 89% 60% / 0.15) 0%, transparent 60%)',
+        backgroundImage: 'radial-gradient(circle at 50% 50%, hsl(var(--electric-indigo) / 0.15) 0%, transparent 60%)',
       }} />
 
       <div className="section-container relative z-10">
@@ -36,7 +62,7 @@ const BookCall = () => {
               <span className="gradient-text">AI Automation System</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Ready to eliminate repetitive work and unlock growth? Book a free strategy call 
+              Ready to eliminate repetitive work and unlock growth? Send us a message
               and let's design your custom automation roadmap.
             </p>
           </motion.div>
@@ -49,107 +75,123 @@ const BookCall = () => {
             className="glass-card p-8 lg:p-12"
           >
             <div className="grid lg:grid-cols-2 gap-10">
-              {/* Calendar Placeholder */}
+              {/* Send a message form */}
               <div className="space-y-6">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Calendar className="text-primary" size={24} />
+                    <MessageSquare className="text-primary" size={24} />
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-lg text-foreground">
-                      Book a Strategy Call
+                      Send a message
                     </h3>
                     <p className="text-muted-foreground text-sm">
-                      30 min • Free consultation
+                      We'll get back to you within 24 hours
                     </p>
                   </div>
                 </div>
 
-                <div className="glass-card p-6 space-y-4">
-                  <p className="text-foreground font-medium">What you'll get:</p>
-                  <ul className="space-y-3">
-                    {[
-                      'Personalized automation assessment',
-                      'Custom strategy recommendations',
-                      'ROI projection for your business',
-                      'Clear next steps roadmap',
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-center gap-3 text-muted-foreground">
-                        <ArrowRight size={16} className="text-primary" />
-                        <span className="text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      Your Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      placeholder="John Smith"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      placeholder="Acme Inc."
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      Work Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
+                      placeholder="john@acme.com"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                      What do you want to automate?
+                    </label>
+                    <textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      rows={4}
+                      className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground resize-none"
+                      placeholder="Tell us about your automation needs..."
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="btn-primary w-full flex items-center justify-center gap-2 disabled:opacity-70 disabled:pointer-events-none"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={18} className="animate-spin" />
+                        <span>Sending…</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send message</span>
+                        <Send size={18} />
+                      </>
+                    )}
+                  </button>
+                </form>
               </div>
 
-              {/* Contact Form */}
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                    placeholder="John Smith"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                    placeholder="Acme Inc."
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Work Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground"
-                    placeholder="john@acme.com"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    What do you want to automate?
-                  </label>
-                  <textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={4}
-                    className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-foreground placeholder:text-muted-foreground resize-none"
-                    placeholder="Tell us about your automation needs..."
-                    required
-                  />
-                </div>
-
-                <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
-                  <span>Book Free Strategy Call</span>
-                  <Send size={18} />
-                </button>
-              </form>
+              {/* What you'll get */}
+              <div className="space-y-6">
+                <p className="text-foreground font-medium">What you'll get:</p>
+                <ul className="space-y-3">
+                  {[
+                    'Personalized automation assessment',
+                    'Custom strategy recommendations',
+                    'ROI projection for your business',
+                    'Clear next steps roadmap',
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-muted-foreground">
+                      <ArrowRight size={16} className="text-primary shrink-0" />
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-muted-foreground text-sm pt-4">
+                  Messages are sent to <a href={`mailto:${CONTACT_EMAIL}`} className="text-primary hover:underline">{CONTACT_EMAIL}</a>.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>

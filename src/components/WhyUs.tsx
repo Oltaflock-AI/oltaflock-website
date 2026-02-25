@@ -45,7 +45,7 @@ const WhyUs = () => {
   return (
     <section id="why-us" className="py-24 relative">
       <div className="absolute inset-0 opacity-50" style={{
-        backgroundImage: 'radial-gradient(circle at 70% 50%, hsl(234 89% 60% / 0.1) 0%, transparent 50%)',
+        backgroundImage: 'radial-gradient(circle at 70% 50%, hsl(var(--electric-indigo) / 0.1) 0%, transparent 50%)',
       }} />
 
       <div className="section-container relative z-10">

@@ -9,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 opacity-30"
         style={{
-          backgroundImage: 'radial-gradient(circle at 70% 30%, hsl(239 84% 67% / 0.2) 0%, transparent 50%)',
+          backgroundImage: 'radial-gradient(circle at 70% 30%, hsl(var(--electric-indigo) / 0.2) 0%, transparent 50%)',
         }}
       />
       
@@ -86,8 +86,8 @@ const Hero = () => {
                 <span>See What We Can Automate</span>
                 <ArrowRight size={18} />
               </a>
-              <a href="#book-call" className="btn-secondary flex items-center justify-center gap-2">
-                Book Free Consultation
+              <a href="#send-message" className="btn-secondary flex items-center justify-center gap-2">
+                Send a message
               </a>
             </motion.div>
           </motion.div>

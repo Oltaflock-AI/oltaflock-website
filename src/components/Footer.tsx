@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram, Facebook } from 'lucide-react';
-import logo from '@/assets/oltaflock-logo.png';
 
 const Footer = () => {
   return (
@@ -16,7 +15,7 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
-              <img src={logo} alt="Oltaflock AI" className="h-10 w-auto" />
+              <img src="/OFfavicon.png" alt="Oltaflock AI" className="h-12 w-12" />
               <span className="font-display font-bold text-xl text-foreground">
                 Oltaflock <span className="gradient-text">AI</span>
               </span>
@@ -43,7 +42,7 @@ const Footer = () => {
             <a href="#use-cases" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               Use Cases
             </a>
-            <a href="#book-call" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <a href="#send-message" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               Contact
             </a>
           </motion.div>

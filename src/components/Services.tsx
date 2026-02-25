@@ -57,7 +57,7 @@ const Services = () => {
   return (
     <section id="services" className="py-24 relative">
       <div className="absolute inset-0 opacity-50" style={{
-        backgroundImage: 'radial-gradient(circle at 30% 50%, hsl(270 91% 65% / 0.08) 0%, transparent 50%)',
+        backgroundImage: 'radial-gradient(circle at 30% 50%, hsl(var(--electric-indigo) / 0.08) 0%, transparent 50%)',
       }} />
       
       <div className="section-container relative z-10">
