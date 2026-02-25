@@ -23,11 +23,15 @@ const BookCall = () => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
       const res = await fetch(`${getApiBase()}/api/send-message`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
+        signal: controller.signal,
       });
+      clearTimeout(timeoutId);
       const data = await res.json().catch(() => ({}));
       if (!res.ok) {
         toast.error(data.error || 'Failed to send message. Try again or email us directly.');
@@ -35,8 +39,13 @@ const BookCall = () => {
       }
       toast.success('Message sent! We\'ll get back to you within 24 hours.');
       setFormData({ name: '', company: '', email: '', message: '' });
-    } catch {
-      toast.error('Could not send message. Check your connection or email us at ' + CONTACT_EMAIL);
+    } catch (err) {
+      const isAborted = err instanceof Error && err.name === 'AbortError';
+      toast.error(
+        isAborted
+          ? 'Request timed out. Check Vercel env (RESEND_API_KEY) and redeploy, or email us at ' + CONTACT_EMAIL
+          : 'Could not send message. Check your connection or email us at ' + CONTACT_EMAIL
+      );
     } finally {
       setIsSubmitting(false);
     }
