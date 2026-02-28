@@ -110,6 +110,10 @@ export default {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -121,6 +125,7 @@ export default {
         "float": "float 6s ease-in-out infinite",
         "pulse-subtle": "pulse-subtle 3s ease-in-out infinite",
         "spin-slow": "spin-slow 20s linear infinite",
+        marquee: "marquee 25s linear infinite",
       },
     },
   },
