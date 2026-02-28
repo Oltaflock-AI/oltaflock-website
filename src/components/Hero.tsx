@@ -4,12 +4,13 @@ import { ArrowRight, Sparkles, Zap, Bot, BadgeCheck } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 animated-gradient-bg" />
+      {/* Background – clean in light mode, animated gradient in dark */}
+      <div className="absolute inset-0 hero-background" />
+      {/* Subtle radial glow – lighter in light mode for readability */}
       <div 
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20 dark:opacity-30"
         style={{
-          backgroundImage: 'radial-gradient(circle at 70% 30%, hsl(var(--electric-indigo) / 0.2) 0%, transparent 50%)',
+          backgroundImage: 'radial-gradient(circle at 70% 30%, hsl(var(--electric-indigo) / 0.15) 0%, transparent 50%)',
         }}
       />
       
@@ -71,7 +72,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-foreground/70 dark:text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
             >
               Custom AI workflows that eliminate manual work and unlock scale.
             </motion.p>

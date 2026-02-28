@@ -202,7 +202,19 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  .animated-gradient-bg {
+  /* Hero background – theme-aware, no grey overlay in light mode */
+  .hero-background {
+    /* Light mode: clean, bright gradient with subtle primary tint */
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(199 45% 97.5%) 25%,
+      hsl(199 35% 96.5%) 50%,
+      hsl(199 45% 97.5%) 75%,
+      hsl(var(--background)) 100%
+    );
+  }
+  .dark .hero-background {
     background: linear-gradient(
       135deg,
       hsl(var(--deep-navy)) 0%,
@@ -219,8 +231,12 @@
   }
 
   .particle {
-    @apply absolute rounded-full bg-primary/30;
+    @apply absolute rounded-full;
+    background: hsl(var(--primary) / 0.2);
     animation: particle-float 10s ease-in-out infinite;
+  }
+  .dark .particle {
+    background: hsl(var(--primary) / 0.3);
   }
 }
 
