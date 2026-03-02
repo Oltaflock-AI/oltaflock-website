@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -55,27 +55,50 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center justify-center md:justify-end gap-4"
           >
-            <a 
-              href="https://www.instagram.com/oltaflock.ai/" 
+            <a
+              href="https://x.com/Oltaflock_AI"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="X (Twitter)"
+            >
+              <svg viewBox="0 0 24 24" className="w-[18px] h-[18px] fill-current text-muted-foreground" aria-hidden>
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@Oltaflock"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube size={18} className="text-muted-foreground" />
+            </a>
+            <a
+              href="https://www.instagram.com/oltaflock.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="Instagram"
             >
               <Instagram size={18} className="text-muted-foreground" />
             </a>
-            <a 
-              href="https://www.linkedin.com/company/oltaflock-ai" 
+            <a
+              href="https://www.linkedin.com/company/oltaflock-ai"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="LinkedIn"
             >
               <Linkedin size={18} className="text-muted-foreground" />
             </a>
-            <a 
-              href="https://www.facebook.com/profile.php?id=61585295918151" 
+            <a
+              href="https://www.facebook.com/profile.php?id=61585295918151"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-primary/20 transition-colors"
+              aria-label="Facebook"
             >
               <Facebook size={18} className="text-muted-foreground" />
             </a>
