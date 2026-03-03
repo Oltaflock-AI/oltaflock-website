@@ -21,7 +21,7 @@ const steps = [
     number: '03',
     label: 'Build',
     title: 'Development & System Build',
-    description: 'We engineer robust AI pipelines, automation workflows, dashboards, and intelligent agents — built for performance, security, and scale.',
+    description: 'We engineer robust AI pipelines, automation workflows, dashboards, and intelligent agents, built for performance, security, and scale.',
   },
   {
     icon: Rocket,

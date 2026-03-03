@@ -78,9 +78,17 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-foreground/70 dark:text-muted-foreground mb-6 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-foreground/70 dark:text-muted-foreground mb-4 max-w-xl mx-auto lg:mx-0"
             >
-              Custom AI workflows that eliminate manual work and unlock scale.
+              Our AI agents resolve 80% of customer inquiries instantly, no human needed. Clients reclaim 10+ hours every week from day one.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.42 }}
+              className="text-base text-primary font-medium mb-6 max-w-xl mx-auto lg:mx-0"
+            >
+              Custom-built, 24/7 production-grade systems, not templates.
             </motion.p>
 
             <motion.div

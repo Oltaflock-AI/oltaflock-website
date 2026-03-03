@@ -12,7 +12,7 @@ const features = [
   {
     icon: Layers,
     title: 'System-First Architecture',
-    description: 'We design automation like infrastructure — not scripts. Our systems are modular, scalable, observable, and production-grade from day one.',
+    description: 'We design automation like infrastructure, not scripts. Our systems are modular, scalable, observable, and production-grade from day one.',
   },
   {
     icon: Sparkles,
@@ -22,12 +22,12 @@ const features = [
   {
     icon: Shield,
     title: 'Production Reliability by Design',
-    description: 'Built to run 24/7 without breaking — engineered for uptime, fault tolerance, retries, monitoring, and resilience.',
+    description: 'Built to run 24/7 without breaking. Engineered for uptime, fault tolerance, retries, monitoring, and resilience.',
   },
   {
     icon: Workflow,
     title: 'Business-Logic Driven Automation',
-    description: 'Your workflows define the system — not templates. Every automation mirrors your real operations and edge cases.',
+    description: 'Your workflows define the system, not templates. Every automation mirrors your real operations and edge cases.',
   },
   {
     icon: TrendingUp,
