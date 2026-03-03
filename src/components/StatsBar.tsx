@@ -28,17 +28,17 @@ const StatsBar = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 lg:gap-24"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-16 lg:gap-24 items-start sm:items-center"
         >
-          {STATS.map((stat, i) => (
+          {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex items-center gap-4 text-center sm:text-left"
+              className="flex items-center gap-4 w-full sm:flex-col sm:text-center"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+              <div className="w-12 h-12 min-w-[3rem] rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <stat.icon className="text-primary" size={22} />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-0.5">
                   {stat.label}
                 </p>
