@@ -56,7 +56,7 @@ const UseCases = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Real Automation. <span className="gradient-text">Real Impact.</span>
@@ -65,6 +65,27 @@ const UseCases = () => {
             See how businesses like yours are transforming their operations with custom AI automation.
           </p>
         </motion.div>
+
+        <div className="grid sm:grid-cols-3 gap-4 mb-16">
+          <div id="small-business" className="scroll-mt-24 p-5 rounded-xl border border-border/80 bg-card/80">
+            <h3 className="font-display text-lg font-semibold text-foreground mb-2">Small Businesses</h3>
+            <p className="text-muted-foreground text-sm">
+              Compete with bigger players without hiring a team. AI automation that fits your budget.
+            </p>
+          </div>
+          <div id="startups" className="scroll-mt-24 p-5 rounded-xl border border-border/80 bg-card/80">
+            <h3 className="font-display text-lg font-semibold text-foreground mb-2">Startups</h3>
+            <p className="text-muted-foreground text-sm">
+              Scale fast without the chaos. Automated CRM, support, and sales workflows from day one.
+            </p>
+          </div>
+          <div id="enterprises" className="scroll-mt-24 p-5 rounded-xl border border-border/80 bg-card/80">
+            <h3 className="font-display text-lg font-semibold text-foreground mb-2">Enterprises</h3>
+            <p className="text-muted-foreground text-sm">
+              Complex workflows, integrated and secure. Custom AI that meets enterprise standards.
+            </p>
+          </div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {useCases.map((useCase, index) => (

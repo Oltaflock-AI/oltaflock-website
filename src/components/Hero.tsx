@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, Bot, BadgeCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Bot, BadgeCheck, Store, Rocket, Building2 } from 'lucide-react';
+
+const SEGMENTS = [
+  { id: 'small-business', label: "I'm a Small Business", icon: Store, tagline: 'Compete without the overhead' },
+  { id: 'startups', label: "I'm a Startup", icon: Rocket, tagline: 'Scale fast from day one' },
+  { id: 'enterprises', label: "I'm an Enterprise", icon: Building2, tagline: 'Complex workflows, integrated' },
+];
 
 const Hero = () => {
   return (
@@ -72,10 +78,33 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-lg sm:text-xl text-foreground/70 dark:text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-foreground/70 dark:text-muted-foreground mb-6 max-w-xl mx-auto lg:mx-0"
             >
               Custom AI workflows that eliminate manual work and unlock scale.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45 }}
+              className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8"
+            >
+              {SEGMENTS.map((seg, i) => (
+                <a
+                  key={seg.id}
+                  href={`#${seg.id}`}
+                  className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-border/80 bg-card/80 hover:bg-primary/10 hover:border-primary/30 transition-all duration-200 text-left min-w-[140px] sm:min-w-[160px]"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
+                    <seg.icon className="text-primary" size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{seg.label}</p>
+                    <p className="text-xs text-muted-foreground">{seg.tagline}</p>
+                  </div>
+                </a>
+              ))}
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
