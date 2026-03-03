@@ -1,0 +1,52 @@
+# Oltaflock AI
+
+> Custom AI automation agency that eliminates manual work and unlocks scale for growing businesses.
+
+Oltaflock AI is an AI automation agency based in Ahmedabad, India, building custom AI workflows, intelligent agents, and end-to-end business process automation. We serve growing businesses that want to automate repetitive tasks, streamline operations, and scale without adding headcount.
+
+Key capabilities:
+- Custom AI agents that work autonomously 24/7
+- End-to-end business process automation
+- CRM and sales pipeline automation
+- AI-powered customer support systems
+- Internal workflow and approval automation
+- Real-time data dashboards and reporting
+- Bespoke AI tool development
+- System integrations across business tools
+
+## Services
+
+- [AI Agents](https://oltaflock.ai/#services): Intelligent agents that handle complex tasks, make decisions, and operate autonomously around the clock
+- [Business Process Automation](https://oltaflock.ai/#services): End-to-end automation of repetitive workflows to reduce errors and save time
+- [CRM & Sales Automation](https://oltaflock.ai/#services): Automated lead nurturing, follow-ups, and pipeline management
+- [Customer Support Automation](https://oltaflock.ai/#services): AI-powered support systems that resolve issues instantly and escalate when needed
+- [Internal Workflow Automation](https://oltaflock.ai/#services): Streamline approvals, onboarding, and reporting
+- [Data & Reporting Automation](https://oltaflock.ai/#services): Real-time dashboards and automated reports
+- [Custom AI Tools](https://oltaflock.ai/#services): Bespoke AI applications for unique business challenges
+- [System Integrations](https://oltaflock.ai/#services): Connect all your tools into one seamless automated ecosystem
+
+## Our Process
+
+- Discovery & Workflow Mapping: Deep analysis of workflows, tools, and bottlenecks to uncover high-ROI automation opportunities
+- System Architecture & AI Design: Production-grade AI and automation architecture tailored to your business
+- Development & System Build: Robust AI pipelines, automation workflows, and intelligent agents built for performance and security
+- Testing, Deployment & Integration: Rigorous testing and integration into existing tools with zero disruption
+- Optimization, Monitoring & Scale: Continuous monitoring and iteration to maximise ROI
+
+## Engineering Principles
+
+- System-first architecture - modular, scalable, and production-grade from day one
+- AI and deterministic workflow fusion for reliability and predictability
+- Built for 24/7 uptime with fault tolerance and resilience
+- Business-logic driven - every automation mirrors your real operations
+- Enterprise-grade security with encrypted data flows and audit logging
+
+## Getting Started
+
+- [Contact Us](https://oltaflock.ai/#send-message): Send a message to get a personalised automation assessment, custom strategy, and ROI projection
+- [See What We Automate](https://oltaflock.ai/#services): Explore our automation capabilities
+
+## Company
+
+- [Oltaflock AI](https://oltaflock.ai): Home
+- Contact: admin@oltaflock.ai
