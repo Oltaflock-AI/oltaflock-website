@@ -61,8 +61,10 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <motion.img
               src="/OFfavicon.png"
-              alt="Oltaflock AI"
+              alt="Oltaflock AI - Custom AI automation solutions"
               className="h-14 w-14 md:h-16 md:w-16"
+              width={64}
+              height={64}
               whileHover={{ scale: 1.05, rotate: 5 }}
               transition={{ duration: 0.2 }}
             />

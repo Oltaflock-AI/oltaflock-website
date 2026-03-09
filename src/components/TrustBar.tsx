@@ -16,8 +16,11 @@ const LogoCard = ({ client }: { client: (typeof clients)[0] }) => (
       <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 flex items-center justify-center mb-4 flex-shrink-0 relative z-10">
         <img
           src={client.logo}
-          alt={client.name}
+          alt={`${client.name} - Client of Oltaflock AI`}
           className="w-full h-full object-contain drop-shadow-sm"
+          loading="lazy"
+          width={128}
+          height={128}
         />
       </div>
       <span className="text-muted-foreground text-sm md:text-base font-medium text-center group-hover:text-foreground transition-colors relative z-10">

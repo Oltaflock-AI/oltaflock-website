@@ -15,7 +15,7 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
-              <img src="/OFfavicon.png" alt="Oltaflock AI" className="h-12 w-12" />
+              <img src="/OFfavicon.png" alt="Oltaflock AI - Custom AI automation for businesses" className="h-12 w-12" loading="lazy" width="48" height="48" />
               <span className="font-display font-bold text-xl text-foreground">
                 Oltaflock <span className="gradient-text">AI</span>
               </span>
