@@ -55,7 +55,7 @@ const Process = () => {
             <span className="gradient-text">That Actually Works</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A proven process that delivers results, not just promises.
+            A proven process for custom AI systems and workflow automation. Results, not just promises.
           </p>
         </motion.div>
 

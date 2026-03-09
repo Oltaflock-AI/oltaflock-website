@@ -62,7 +62,7 @@ const UseCases = () => {
             Real Automation. <span className="gradient-text">Real Impact.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            See how businesses like yours are transforming their operations with custom AI automation.
+            See how businesses transform operations with <strong>AI automation</strong>: intelligent workflows, AI agents, and business automation that deliver measurable results.
           </p>
         </motion.div>
 

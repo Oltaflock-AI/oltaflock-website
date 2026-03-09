@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Process', href: '#process' },
   { name: 'Why Us', href: '#why-us' },
   { name: 'Use Cases', href: '#use-cases' },
+  { name: 'FAQ', href: '#faq' },
 ];
 
 const calComLink = import.meta.env.VITE_CALCOM_LINK ?? '';

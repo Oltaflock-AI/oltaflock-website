@@ -72,7 +72,7 @@ const Services = () => {
             What We <span className="gradient-text">Automate</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            From simple tasks to complex systems, we automate everything that slows your business down.
+            From workflow automation to custom AI systems, we handle <strong>business process automation</strong>, CRM & sales automation, and customer support automation. We take care of everything that slows you down.
           </p>
         </motion.div>
 

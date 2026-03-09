@@ -42,6 +42,9 @@ const Footer = () => {
             <a href="#use-cases" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               Use Cases
             </a>
+            <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+              FAQ
+            </a>
             <a href="#send-message" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
               Contact
             </a>

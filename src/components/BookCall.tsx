@@ -71,8 +71,7 @@ const BookCall = () => {
               <span className="gradient-text">AI Automation System</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Ready to eliminate repetitive work and unlock growth? Send us a message
-              and let's design your custom automation roadmap.
+              Ready to eliminate repetitive work with custom AI systems? <a href="#services" className="text-primary hover:underline">Explore our services</a> or send a message. We&apos;ll design your workflow automation roadmap.
             </p>
           </motion.div>
 
