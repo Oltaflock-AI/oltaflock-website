@@ -80,7 +80,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                className="nav-link text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
               >
                 {link.name}
               </a>

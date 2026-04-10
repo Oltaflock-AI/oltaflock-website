@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -132,11 +132,29 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* Subtle film grain — adds depth without hurting readability */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .dark body::after {
+    opacity: 0.055;
+    mix-blend-mode: soft-light;
   }
 }
 
@@ -206,17 +224,18 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Hero background – theme-aware, no grey overlay in light mode */
+  /* Hero background – theme-aware mesh drift (light) / gradient shift (dark) */
   .hero-background {
-    /* Light mode: clean, bright gradient with subtle primary tint */
     background: linear-gradient(
-      180deg,
+      125deg,
       hsl(var(--background)) 0%,
-      hsl(199 45% 97.5%) 25%,
-      hsl(199 35% 96.5%) 50%,
-      hsl(199 45% 97.5%) 75%,
+      hsl(199 50% 97%) 35%,
+      hsl(199 38% 96%) 55%,
+      hsl(187 35% 96.5%) 72%,
       hsl(var(--background)) 100%
     );
+    background-size: 200% 200%;
+    animation: hero-mesh-light 24s ease-in-out infinite;
   }
   .dark .hero-background {
     background: linear-gradient(
@@ -226,7 +245,7 @@
       hsl(var(--deep-navy)) 100%
     );
     background-size: 200% 200%;
-    animation: gradient-shift 8s ease infinite;
+    animation: gradient-shift 10s ease infinite;
   }
 
   .floating-card {
@@ -247,6 +266,26 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .nav-link {
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--soft-cyan)));
+    transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
   }
 }
 
@@ -298,6 +337,29 @@
 
 .animate-pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes hero-mesh-light {
+  0%, 100% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-background,
+  .dark .hero-background {
+    animation: none !important;
+  }
+  .floating-card,
+  .particle {
+    animation: none !important;
+  }
+  .animate-pulse-glow {
+    animation: none !important;
+  }
 }
 
 /* Trust bar – gradient border card */

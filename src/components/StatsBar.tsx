@@ -26,13 +26,17 @@ const StatsBar = () => {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-16 lg:gap-24 items-start sm:items-center"
         >
-          {STATS.map((stat) => (
-            <div
+          {STATS.map((stat, index) => (
+            <motion.div
               key={stat.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-20px' }}
+              transition={{ duration: 0.45, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="flex items-center gap-4 w-full sm:flex-col sm:text-center"
             >
               <div className="w-12 h-12 min-w-[3rem] rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
@@ -46,7 +50,7 @@ const StatsBar = () => {
                   {stat.claim}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

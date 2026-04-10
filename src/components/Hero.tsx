@@ -98,10 +98,15 @@ const Hero = () => {
               className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8"
             >
               {SEGMENTS.map((seg, i) => (
-                <a
+                <motion.a
                   key={seg.id}
                   href={`#${seg.id}`}
-                  className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-border/80 bg-card/80 hover:bg-primary/10 hover:border-primary/30 transition-all duration-200 text-left min-w-[140px] sm:min-w-[160px]"
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + i * 0.06, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={{ y: -3, transition: { duration: 0.2 } }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group flex items-center gap-3 px-4 py-3 rounded-xl border border-border/80 bg-card/80 backdrop-blur-sm shadow-sm hover:shadow-md hover:bg-primary/10 hover:border-primary/35 transition-shadow duration-300 text-left min-w-[140px] sm:min-w-[160px]"
                 >
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors shrink-0">
                     <seg.icon className="text-primary" size={20} />
@@ -110,7 +115,7 @@ const Hero = () => {
                     <p className="text-sm font-semibold text-foreground">{seg.label}</p>
                     <p className="text-xs text-muted-foreground">{seg.tagline}</p>
                   </div>
-                </a>
+                </motion.a>
               ))}
             </motion.div>
 

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { MotionConfig } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,10 +12,15 @@ const queryClient = new QueryClient();
 
 const App = () => {
   useEffect(() => {
-    document.getElementById("root")!.style.opacity = "1";
+    const root = document.getElementById("root");
+    if (root) {
+      root.style.opacity = "1";
+      root.style.transition = "opacity 0.45s ease-out";
+    }
   }, []);
 
   return (
+  <MotionConfig reducedMotion="user">
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -28,6 +34,7 @@ const App = () => {
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  </MotionConfig>
   );
 };
 
