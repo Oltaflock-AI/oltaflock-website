@@ -8,7 +8,7 @@ const navLinks = [
   { name: 'Process', href: '/#process' },
   { name: 'Why Us', href: '/#why-us' },
   { name: 'Studio', href: '/#studio' },
-  { name: 'Work', href: '/work', route: true },
+  { name: 'Work', href: '/studio-work', route: true },
   { name: 'FAQ', href: '/#faq' },
 ];
 

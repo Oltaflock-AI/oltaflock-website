@@ -42,19 +42,25 @@ const HoverVideo = ({ src, poster, title, tag, featured = false, className = '' 
     return () => io.disconnect();
   }, [featured, reduced]);
 
+  // Hover is a user gesture, so unmuting here is allowed by autoplay policies.
   const start = () => {
     if (reduced) return;
     setLoad(true);
     const el = ref.current;
-    if (el) el.play().catch(() => {});
+    if (el) {
+      el.muted = false;
+      el.volume = 1;
+      el.play().catch(() => {});
+    }
   };
   const stop = () => {
-    if (featured) return;
     const el = ref.current;
-    if (el) {
-      el.pause();
-      el.currentTime = 0;
-    }
+    if (!el) return;
+    // Mute on leave so the in-view featured clip keeps playing silently rather than blasting audio.
+    el.muted = true;
+    if (featured) return;
+    el.pause();
+    el.currentTime = 0;
   };
 
   return (

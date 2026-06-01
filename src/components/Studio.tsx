@@ -68,7 +68,7 @@ const Studio = () => {
         </motion.div>
 
         <div className="mt-8 flex justify-center sm:justify-start">
-          <Link to="/work" className="btn-primary group inline-flex items-center gap-2">
+          <Link to="/studio-work" className="btn-primary group inline-flex items-center gap-2">
             View all our work
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
           </Link>
