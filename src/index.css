@@ -147,6 +147,29 @@
     @apply text-[11px] uppercase tracking-[0.18em] text-faint font-medium;
   }
 
+  /* Long-form legal / policy copy */
+  .legal-prose {
+    @apply text-muted-foreground text-[15px] leading-relaxed;
+  }
+  .legal-prose h2 {
+    @apply font-display text-foreground text-xl sm:text-2xl font-bold tracking-tight mt-12 mb-3 first:mt-0;
+  }
+  .legal-prose h3 {
+    @apply font-display text-foreground text-base font-semibold mt-7 mb-2;
+  }
+  .legal-prose p {
+    @apply mb-4;
+  }
+  .legal-prose ul {
+    @apply mb-4 pl-5 list-disc space-y-1.5 marker:text-border-strong;
+  }
+  .legal-prose a {
+    @apply text-foreground underline underline-offset-2 hover:text-primary transition-colors;
+  }
+  .legal-prose strong {
+    @apply text-foreground font-semibold;
+  }
+
   /* Nav links with an animated underline that wipes in on hover */
   .nav-link {
     @apply relative text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200;

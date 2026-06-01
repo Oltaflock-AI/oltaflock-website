@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Why Us', href: '/#why-us' },
   { name: 'Studio', href: '/#studio' },
   { name: 'Work', href: '/studio-work', route: true },
-  { name: 'FAQ', href: '/#faq' },
+  { name: 'FAQ', href: '/faq', route: true },
 ];
 
 const calComLink = import.meta.env.VITE_CALCOM_LINK ?? '';

@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from '@/components/ui/accordion';
@@ -49,10 +51,11 @@ const FAQ = () => {
             ))}
           </Accordion>
 
-          <div className="mt-8 flex items-center gap-4">
-            <p className="text-muted-foreground text-sm">
-              Have more questions about business automation or AI agents?
-            </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link to="/faq" className="btn-primary group">
+              View all FAQs
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            </Link>
             <a href="#send-message" className="btn-ghost">Get in touch</a>
           </div>
         </motion.div>

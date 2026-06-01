@@ -1,14 +1,6 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Linkedin, Instagram, Facebook, Youtube } from 'lucide-react';
-
-const links = [
-  { name: 'Services', href: '#services' },
-  { name: 'Process', href: '#process' },
-  { name: 'Why Us', href: '#why-us' },
-  { name: 'Studio', href: '#studio' },
-  { name: 'FAQ', href: '#faq' },
-  { name: 'Contact', href: '#send-message' },
-];
 
 const Footer = () => {
   return (
@@ -31,14 +23,6 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               We build the AI systems that free your team from repetitive work.
             </p>
-          </div>
-
-          <div className="flex flex-wrap gap-x-7 gap-y-3">
-            {links.map((l) => (
-              <a key={l.name} href={l.href} className="text-muted-foreground hover:text-foreground transition-colors text-sm">
-                {l.name}
-              </a>
-            ))}
           </div>
 
           <div className="flex items-center gap-2.5">
@@ -78,7 +62,13 @@ const Footer = () => {
               className="hover:text-foreground transition-colors"
             >
               +91 95895 94181
-            </a>{' '}· Ahmedabad, Gujarat
+            </a>{' '}· Ahmedabad, Gujarat{' '}·{' '}
+            <Link to="/privacy" className="hover:text-foreground transition-colors">
+              Privacy Policy
+            </Link>{' '}·{' '}
+            <Link to="/terms" className="hover:text-foreground transition-colors">
+              Terms &amp; Conditions
+            </Link>
           </p>
         </div>
       </div>
