@@ -1,3 +1,4 @@
+import { Head } from 'vite-react-ssg';
 import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -17,6 +18,25 @@ import Footer from '@/components/Footer';
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>Custom AI Automation Solutions | Oltaflock AI</title>
+        <meta
+          name="description"
+          content="Custom AI automation systems that eliminate repetitive work and unlock growth. Explore our AI agents and workflow automation. Schedule a free consultation today."
+        />
+        <link rel="canonical" href="https://oltaflock.ai/" />
+        <meta property="og:title" content="Custom AI Automation Solutions | Oltaflock AI" />
+        <meta
+          property="og:description"
+          content="Stop working IN your business. Start working ON it. Custom AI automation systems tailored to your needs."
+        />
+        <meta property="og:url" content="https://oltaflock.ai/" />
+        <meta name="twitter:title" content="Custom AI Automation Solutions | Oltaflock AI" />
+        <meta
+          name="twitter:description"
+          content="Stop working IN your business. Start working ON it. Custom AI automation systems tailored to your needs."
+        />
+      </Head>
       <ScrollProgress />
       <Navbar />
       <main>

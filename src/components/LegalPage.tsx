@@ -1,5 +1,6 @@
-import { type ReactNode, useEffect } from 'react';
+import { type ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { motion } from 'framer-motion';
 import { ArrowLeft } from 'lucide-react';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -14,17 +15,11 @@ type LegalPageProps = {
 };
 
 const LegalPage = ({ title, updated, docTitle, children }: LegalPageProps) => {
-  useEffect(() => {
-    const prev = document.title;
-    document.title = docTitle;
-    window.scrollTo(0, 0);
-    return () => {
-      document.title = prev;
-    };
-  }, [docTitle]);
-
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>{docTitle}</title>
+      </Head>
       <ScrollProgress />
       <Navbar />
 

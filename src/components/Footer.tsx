@@ -62,14 +62,17 @@ const Footer = () => {
               className="hover:text-foreground transition-colors"
             >
               +91 95895 94181
-            </a>{' '}· Ahmedabad, Gujarat{' '}·{' '}
-            <Link to="/privacy" className="hover:text-foreground transition-colors">
-              Privacy Policy
-            </Link>{' '}·{' '}
-            <Link to="/terms" className="hover:text-foreground transition-colors">
-              Terms &amp; Conditions
-            </Link>
+            </a>{' '}· Ahmedabad, Gujarat
           </p>
+        </div>
+
+        <div className="mt-4 flex sm:justify-end gap-x-5">
+          <Link to="/privacy" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
+            Privacy Policy
+          </Link>
+          <Link to="/terms" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
+            Terms &amp; Conditions
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,22 +1,26 @@
-import { useEffect, lazy, Suspense } from "react";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import { MotionConfig } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomCursor from "./components/CustomCursor";
-import Index from "./pages/Index";
-
-// Sub-pages are split out of the homepage bundle and loaded on demand.
-const Work = lazy(() => import("./pages/Work"));
-const FAQ = lazy(() => import("./pages/FAQ"));
-const Privacy = lazy(() => import("./pages/Privacy"));
-const Terms = lazy(() => import("./pages/Terms"));
-const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
+// Reset scroll to top on every route change (react-router does not do this).
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+// Root layout shared by every route. The router is provided by vite-react-ssg
+// (BrowserRouter on the client, static routing during prerender), so this only
+// supplies app-wide providers and renders the active route via <Outlet />.
 const App = () => {
   useEffect(() => {
     const root = document.getElementById("root");
@@ -27,28 +31,17 @@ const App = () => {
   }, []);
 
   return (
-  <MotionConfig reducedMotion="user">
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <CustomCursor />
-      <BrowserRouter>
-        <Suspense fallback={null}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/studio-work" element={<Work />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-  </MotionConfig>
+    <MotionConfig reducedMotion="user">
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <CustomCursor />
+          <ScrollToTop />
+          <Outlet />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </MotionConfig>
   );
 };
 

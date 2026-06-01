@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { ClientOnly } from 'vite-react-ssg';
 import Cal, { getCalApi } from '@calcom/embed-react';
 
 const CAL_NAMESPACE = 'oltaflock-ai-demo';
@@ -47,12 +48,16 @@ const BookCall = () => {
           transition={{ duration: 0.55, delay: 0.15 }}
           className="panel p-2 sm:p-3 overflow-hidden"
         >
-          <Cal
-            namespace={CAL_NAMESPACE}
-            calLink={CAL_LINK}
-            style={{ width: '100%', height: '700px', overflow: 'scroll' }}
-            config={{ layout: 'month_view', theme: isDark ? 'dark' : 'light' }}
-          />
+          <ClientOnly fallback={<div style={{ width: '100%', height: '700px' }} />}>
+            {() => (
+              <Cal
+                namespace={CAL_NAMESPACE}
+                calLink={CAL_LINK}
+                style={{ width: '100%', height: '700px', overflow: 'scroll' }}
+                config={{ layout: 'month_view', theme: isDark ? 'dark' : 'light' }}
+              />
+            )}
+          </ClientOnly>
         </motion.div>
       </div>
     </section>

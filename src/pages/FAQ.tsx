@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { Plus, ArrowRight, ArrowLeft } from 'lucide-react';
 import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
@@ -13,51 +13,34 @@ const TITLE = 'FAQ — Oltaflock AI | AI Automation & AI Agent Development (Indi
 const DESC =
   'Answers about Oltaflock AI, a custom AI automation and AI agent development company in Ahmedabad, India — services, pricing, timelines, AI workflows, and orchestration.';
 
+// FAQPage structured data — emitted into the prerendered HTML for rich results.
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${PAGE_URL}#faq`,
+  url: PAGE_URL,
+  name: 'Oltaflock AI — Frequently Asked Questions',
+  inLanguage: 'en',
+  mainEntity: allFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
 const FAQ = () => {
-  // Per-page SEO/AEO: title, description, canonical, and FAQPage structured
-  // data injected into <head>. The native <details> below keep every answer in
-  // the DOM (crawlable) even while visually collapsed.
-  useEffect(() => {
-    const prevTitle = document.title;
-    document.title = TITLE;
-    window.scrollTo(0, 0);
-
-    const descEl = document.querySelector('meta[name="description"]');
-    const prevDesc = descEl?.getAttribute('content') ?? null;
-    descEl?.setAttribute('content', DESC);
-
-    const canonical = document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = PAGE_URL;
-    document.head.appendChild(canonical);
-
-    const ld = document.createElement('script');
-    ld.type = 'application/ld+json';
-    ld.text = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      '@id': `${PAGE_URL}#faq`,
-      url: PAGE_URL,
-      name: 'Oltaflock AI — Frequently Asked Questions',
-      inLanguage: 'en',
-      mainEntity: allFaqs.map((f) => ({
-        '@type': 'Question',
-        name: f.q,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
-      })),
-    });
-    document.head.appendChild(ld);
-
-    return () => {
-      document.title = prevTitle;
-      if (prevDesc !== null) descEl?.setAttribute('content', prevDesc);
-      canonical.remove();
-      ld.remove();
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={PAGE_URL} />
+        <script type="application/ld+json">{JSON.stringify(faqLd)}</script>
+      </Head>
+
       <ScrollProgress />
       <Navbar />
 

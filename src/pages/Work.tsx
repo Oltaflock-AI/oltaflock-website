@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Head } from 'vite-react-ssg';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -12,6 +13,11 @@ import { studioVideos } from '@/data/studioWork';
 
 const filters = ['All', 'Automotive', 'Product travel', 'Live-action', 'Stylized', 'Product'] as const;
 
+const WORK_TITLE = 'Our Work — Oltaflock Studio | AI Video & Image Generation';
+const WORK_DESC =
+  'Showreel of production-ready AI video and image generation by Oltaflock Studio — product films, ads, brand lifestyle, and stylized scenes, generated in-house.';
+const WORK_URL = 'https://oltaflock.ai/studio-work';
+
 const studioStats = [
   { value: studioVideos.length, suffix: '', label: 'AI-generated clips' },
   { value: new Set(studioVideos.map((v) => v.tag)).size, suffix: '', label: 'creative categories' },
@@ -22,15 +28,6 @@ const studioStats = [
 const Work = () => {
   const [active, setActive] = useState<(typeof filters)[number]>('All');
 
-  useEffect(() => {
-    const prev = document.title;
-    document.title = 'Our Work — Oltaflock Studio | AI Video & Image Generation';
-    window.scrollTo(0, 0);
-    return () => {
-      document.title = prev;
-    };
-  }, []);
-
   const visible = useMemo(
     () => (active === 'All' ? studioVideos : studioVideos.filter((v) => v.tag === active)),
     [active]
@@ -38,6 +35,14 @@ const Work = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Head>
+        <title>{WORK_TITLE}</title>
+        <meta name="description" content={WORK_DESC} />
+        <link rel="canonical" href={WORK_URL} />
+        <meta property="og:title" content={WORK_TITLE} />
+        <meta property="og:description" content={WORK_DESC} />
+        <meta property="og:url" content={WORK_URL} />
+      </Head>
       <ScrollProgress />
       <Navbar />
 

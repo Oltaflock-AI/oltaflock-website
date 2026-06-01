@@ -142,7 +142,7 @@ const HoverVideo = ({ src, poster, title, tag, featured = false, className = '' 
       </div>
 
       {/* Fullscreen lightbox */}
-      {createPortal(
+      {typeof document !== 'undefined' && createPortal(
         <AnimatePresence>
           {expanded && (
             <motion.div
