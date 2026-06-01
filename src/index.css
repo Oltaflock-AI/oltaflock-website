@@ -105,12 +105,18 @@
 
   html {
     scroll-behavior: smooth;
+    /* Lock the scroll root to the viewport width so nothing scrolls sideways. */
+    overflow-x: clip;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Hanken Grotesk', system-ui, sans-serif;
     font-feature-settings: 'ss01';
+    /* Guard against any full-bleed child (marquees, animated transforms) leaking
+       horizontal scroll on small screens. */
+    overflow-x: clip;
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -180,6 +186,9 @@
   .marquee-mask {
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
     mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent);
+  }
+  .marquee-group {
+    overflow: hidden;
   }
   .marquee-track {
     display: flex;

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type TouchEvent } from 'react';
 import { Play } from 'lucide-react';
 
 type Props = {
@@ -63,12 +63,30 @@ const HoverVideo = ({ src, poster, title, tag, featured = false, className = '' 
     el.currentTime = 0;
   };
 
+  // Touch devices have no hover, so the hover-to-play model never fires. A tap
+  // toggles play/pause with sound, making the gallery usable on phones.
+  const handleTouch = (e: TouchEvent) => {
+    if (reduced) return;
+    const el = ref.current;
+    if (!el) return;
+    e.preventDefault();
+    setLoad(true);
+    if (el.paused) {
+      el.muted = false;
+      el.volume = 1;
+      el.play().catch(() => {});
+    } else {
+      el.muted = true;
+      el.pause();
+    }
+  };
+
   return (
     <div
       className={`group relative overflow-hidden rounded-xl border border-border bg-card ${className}`}
       onMouseEnter={start}
       onMouseLeave={stop}
-      onTouchStart={start}
+      onTouchStart={handleTouch}
     >
       <video
         ref={ref}

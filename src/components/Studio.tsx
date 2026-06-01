@@ -61,7 +61,7 @@ const Studio = () => {
             featured
             className="lg:col-span-2 aspect-video"
           />
-          <div className="grid grid-cols-2 lg:grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
             <HoverVideo {...featuredVideos[1]} className="aspect-video" />
             <HoverVideo {...featuredVideos[2]} className="aspect-video" />
           </div>
