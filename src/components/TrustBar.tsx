@@ -29,7 +29,7 @@ const TrustBar = () => {
           {row.map((client, i) => (
             <div
               key={`${client.name}-${i}`}
-              className="group flex flex-col items-center justify-center gap-3 mx-3 px-8 h-32 w-44 rounded-xl border border-border bg-card shrink-0 transition-all duration-300 hover:border-border-strong hover:shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)] hover:-translate-y-0.5"
+              className="group flex flex-col items-center justify-center gap-3 mx-7 px-8 h-32 w-44 rounded-xl border border-border bg-card shrink-0 transition-all duration-300 hover:border-border-strong hover:shadow-[0_8px_24px_-12px_hsl(var(--foreground)/0.18)] hover:-translate-y-0.5"
             >
               <img
                 src={client.logo}
