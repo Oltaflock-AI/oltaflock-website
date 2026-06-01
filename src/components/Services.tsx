@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import {
   Bot, Workflow, Users, MessageSquare, Cog, BarChart3, Wrench, Link,
 } from 'lucide-react';
+import TiltCard from '@/components/ui/tilt-card';
 
 const services = [
   { icon: Bot, title: 'AI Agents', description: 'Intelligent agents that handle complex tasks, make decisions, and work autonomously 24/7.' },
@@ -35,7 +36,7 @@ const Services = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-border rounded-xl overflow-hidden">
           {services.map((service, index) => (
-            <motion.div
+            <TiltCard
               key={service.title}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -51,7 +52,7 @@ const Services = () => {
               </div>
               <h3 className="font-display font-semibold text-[17px] mb-2">{service.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
-            </motion.div>
+            </TiltCard>
           ))}
         </div>
       </div>

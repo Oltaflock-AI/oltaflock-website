@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 
 const steps = [
   { number: '01', label: 'Analyze', title: 'Discovery & Workflow Mapping', description: 'We analyze your workflows, tools, bottlenecks, and growth objectives to uncover high-ROI automation opportunities.' },
@@ -9,6 +10,13 @@ const steps = [
 ];
 
 const Process = () => {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: trackRef,
+    offset: ['start 0.85', 'end 0.5'],
+  });
+  const fill = useSpring(scrollYProgress, { stiffness: 80, damping: 22 });
+
   return (
     <section id="process" className="py-14 sm:py-20 scroll-mt-20 bg-secondary/40 border-t border-border">
       <div className="section-container">
@@ -28,7 +36,15 @@ const Process = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 border-t border-l border-border rounded-xl overflow-hidden bg-card">
+        {/* Scroll-driven progress line — fills as the section scrolls through view */}
+        <div className="relative h-px bg-border mb-8 overflow-hidden">
+          <motion.div
+            style={{ scaleX: fill }}
+            className="absolute inset-0 h-px origin-left bg-primary"
+          />
+        </div>
+
+        <div ref={trackRef} className="grid sm:grid-cols-2 lg:grid-cols-5 border-t border-l border-border rounded-xl overflow-hidden bg-card">
           {steps.map((step, index) => (
             <motion.div
               key={step.number}

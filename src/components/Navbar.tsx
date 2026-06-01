@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Magnetic from '@/components/ui/magnetic';
 
 const navLinks = [
   { name: 'Services', href: '/#services' },
@@ -56,19 +57,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) =>
               link.route ? (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
-                >
+                <Link key={link.name} to={link.href} className="nav-link">
                   {link.name}
                 </Link>
               ) : (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
-                >
+                <a key={link.name} href={link.href} className="nav-link">
                   {link.name}
                 </a>
               )
@@ -76,9 +69,11 @@ const Navbar = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary">
-              Book a Call
-            </a>
+            <Magnetic>
+              <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary">
+                Book a Call
+              </a>
+            </Magnetic>
           </div>
 
           <div className="md:hidden flex items-center gap-2">

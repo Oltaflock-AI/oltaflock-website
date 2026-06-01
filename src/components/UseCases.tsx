@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import {
   MessageCircle, Mail, RefreshCcw, UserCheck, ClipboardList, LayoutDashboard,
 } from 'lucide-react';
+import TiltCard from '@/components/ui/tilt-card';
 
 const segments = [
   { id: 'small-business', title: 'Small Businesses', copy: 'Compete with bigger players without hiring a team. AI automation that fits your budget.' },
@@ -50,7 +51,7 @@ const UseCases = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-border rounded-xl overflow-hidden bg-card">
           {useCases.map((useCase, index) => (
-            <motion.div
+            <TiltCard
               key={useCase.title}
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -68,7 +69,7 @@ const UseCases = () => {
               </div>
               <h3 className="font-display font-semibold text-[17px] mb-2">{useCase.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{useCase.description}</p>
-            </motion.div>
+            </TiltCard>
           ))}
         </div>
       </div>

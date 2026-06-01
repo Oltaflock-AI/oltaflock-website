@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Store, Rocket, Building2 } from 'lucide-react';
+import Magnetic from '@/components/ui/magnetic';
 
 const SEGMENTS = [
   { id: 'small-business', label: "I'm a Small Business", icon: Store, tagline: 'Compete without the overhead' },
@@ -75,10 +76,15 @@ const Hero = () => {
           animate="show"
           className="mt-9 flex flex-col sm:flex-row gap-3 justify-center"
         >
-          <a href="#services" className="btn-primary">
-            See What We Can Automate <ArrowRight size={17} />
-          </a>
-          <a href="#send-message" className="btn-ghost">Send a message</a>
+          <Magnetic>
+            <a href="#services" className="btn-primary group">
+              See What We Can Automate
+              <ArrowRight size={17} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+            </a>
+          </Magnetic>
+          <Magnetic>
+            <a href="#send-message" className="btn-ghost">Send a message</a>
+          </Magnetic>
         </motion.div>
 
         {/* NVIDIA Inception — credibility line */}

@@ -147,9 +147,21 @@
     @apply text-[11px] uppercase tracking-[0.18em] text-faint font-medium;
   }
 
+  /* Nav links with an animated underline that wipes in on hover */
+  .nav-link {
+    @apply relative text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200;
+  }
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 h-px w-full origin-left scale-x-0 bg-foreground transition-transform duration-300 ease-out;
+  }
+  .nav-link:hover::after {
+    @apply scale-x-100;
+  }
+
   /* Buttons */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg text-[14.5px] font-medium px-5 py-2.5 transition-colors duration-200;
+    @apply inline-flex items-center justify-center gap-2 rounded-lg text-[14.5px] font-medium px-5 py-2.5 transition-[colors,transform] duration-200 active:scale-[0.97];
   }
   .btn-primary {
     @apply btn bg-foreground text-background hover:bg-primary;
