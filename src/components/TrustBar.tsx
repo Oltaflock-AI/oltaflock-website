@@ -18,14 +18,14 @@ const TrustBar = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="klabel text-center mb-9"
+          className="klabel text-center mb-9 text-[13px] sm:text-[15px]"
         >
           Trusted by growing businesses
         </motion.p>
       </div>
 
       <div className="marquee-group marquee-mask">
-        <div className="marquee-track" style={{ ['--marquee-duration' as string]: '38s' }}>
+        <div className="marquee-track" style={{ ['--marquee-duration' as string]: '18s' }}>
           {row.map((client, i) => (
             <div
               key={`${client.name}-${i}`}

@@ -32,7 +32,12 @@ const NvidiaInception = () => {
           </div>
 
           <div className="sm:flex-1 sm:border-l sm:border-border sm:pl-5">
-            <p className="klabel mb-1.5" style={{ color: 'hsl(var(--nvidia))' }}>Backed by</p>
+            <h2
+              className="font-display text-2xl sm:text-3xl font-bold tracking-tight mb-2"
+              style={{ color: 'hsl(var(--nvidia))' }}
+            >
+              Backed by
+            </h2>
             <p className="text-muted-foreground text-sm">
               A member of NVIDIA's program for cutting-edge AI startups — giving us advanced compute,
               tooling, and infrastructure that we build directly into the systems we ship for you.
