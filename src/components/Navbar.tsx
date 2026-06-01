@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
-  { name: 'Process', href: '#process' },
-  { name: 'Why Us', href: '#why-us' },
-  { name: 'Use Cases', href: '#use-cases' },
-  { name: 'FAQ', href: '#faq' },
+  { name: 'Services', href: '/#services' },
+  { name: 'Process', href: '/#process' },
+  { name: 'Why Us', href: '/#why-us' },
+  { name: 'Studio', href: '/#studio' },
+  { name: 'Work', href: '/work', route: true },
+  { name: 'FAQ', href: '/#faq' },
 ];
 
 const calComLink = import.meta.env.VITE_CALCOM_LINK ?? '';
@@ -19,21 +20,17 @@ const bookCallRel = calComLink ? 'noopener noreferrer' : undefined;
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
-    // Check system preference on mount
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    const initialTheme = savedTheme ?? 'light';
     setTheme(initialTheme);
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 16);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -47,109 +44,116 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/80 backdrop-blur-xl border-b border-border/50' 
-          : 'bg-transparent'
+      initial={{ y: -24, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        isScrolled
+          ? 'bg-background/80 backdrop-blur-xl border-b border-border'
+          : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="section-container">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <motion.img
+        <div className="flex items-center justify-between h-16">
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <img
               src="/OFfavicon.png"
-              alt="Oltaflock AI - Custom AI automation solutions"
-              className="h-14 w-14 md:h-16 md:w-16"
-              width={64}
-              height={64}
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              transition={{ duration: 0.2 }}
+              alt="Oltaflock AI"
+              className="h-7 w-7"
+              width={28}
+              height={28}
             />
-            <span className="font-display font-bold text-xl text-foreground">
-              Oltaflock <span className="gradient-text">AI</span>
+            <span className="font-display font-bold text-[17px] tracking-tight text-foreground">
+              Oltaflock <span className="text-primary">AI</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="nav-link text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
-              >
-                {link.name}
-              </a>
-            ))}
+          <div className="hidden md:flex items-center gap-7">
+            {navLinks.map((link) =>
+              link.route ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              )
+            )}
           </div>
 
-          {/* Theme Toggle + CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-border bg-card/50 hover:bg-card transition-colors duration-200"
+              className="p-2 rounded-lg border border-border hover:border-border-strong transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
-                <Sun size={18} className="text-foreground" />
-              ) : (
-                <Moon size={18} className="text-foreground" />
-              )}
+              {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
             </button>
             <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary">
-              <span>Book a Call</span>
+              Book a Call
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg border border-border bg-card/50 hover:bg-card transition-colors duration-200"
+              className="p-2 rounded-lg border border-border"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
-                <Sun size={18} className="text-foreground" />
-              ) : (
-                <Moon size={18} className="text-foreground" />
-              )}
+              {theme === 'dark' ? <Sun size={17} /> : <Moon size={17} />}
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-foreground"
+              aria-label="Menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border"
+            className="md:hidden bg-background/95 backdrop-blur-xl border-b border-border overflow-hidden"
           >
-            <div className="section-container py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground py-2 text-lg font-medium"
-                >
-                  {link.name}
-                </a>
-              ))}
-              <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary text-center mt-4">
-                <span>Book a Call</span>
+            <div className="section-container py-5 flex flex-col gap-1">
+              {navLinks.map((link) =>
+                link.route ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-foreground py-2.5 text-base font-medium border-b border-border last:border-0"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-foreground py-2.5 text-base font-medium border-b border-border last:border-0"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
+              <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary mt-3">
+                Book a Call
               </a>
             </div>
           </motion.div>
