@@ -1,59 +1,59 @@
 # Oltaflock AI
 
-Custom AI automation for every business. Marketing site and contact form.
+Marketing site for Oltaflock AI — custom AI automation for every business. A single-page
+marketing homepage plus an Oltaflock Studio showreel, with a Resend-powered contact form.
 
 ## Tech stack
 
-- **Vite** + **React** + **TypeScript**
+- **Vite** + **React 18** + **TypeScript**
 - **Tailwind CSS** + **shadcn/ui**
-- **Resend** (contact form → admin@oltaflock.ai)
+- **React Router** (`/` home, `/studio-work` gallery)
+- **Framer Motion** (scroll/hover animation)
+- **Resend** (contact form → admin@oltaflock.ai, via `/api/send-message`)
 - **Cal.com** (Book a Call button)
+
+Light theme only.
 
 ## Local development
 
 ```bash
-# Install dependencies
-npm install
-
-# Run dev server (http://localhost:8080)
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
+npm install        # install dependencies
+npm run dev        # dev server at http://localhost:8080
+npm run build      # production build to dist/
+npm run preview    # preview the production build
+npm run lint       # eslint
 ```
 
 ## Environment variables
 
-Create a `.env` file (see `.env.example`). Do not commit `.env`.
+Copy `.env.example` to `.env` and fill in. Never commit `.env`.
 
-| Variable | Description |
-|----------|-------------|
-| `VITE_CALCOM_LINK` | Cal.com link for "Book a Call" (e.g. `username/30min`) |
-| `VITE_API_URL` | Optional: API base URL when different from app origin |
-
-For the contact form to work in production, set these in your host (e.g. Vercel):
-
-| Variable | Description |
-|----------|-------------|
-| `RESEND_API_KEY` | Resend API key (from resend.com) |
-| `RESEND_FROM` | Optional: From address (default: onboarding@resend.dev) |
+| Variable | Where | Description |
+|----------|-------|-------------|
+| `VITE_CALCOM_LINK` | client | Cal.com link for "Book a Call" (e.g. `oltaflock/30min`). If unset, the button scrolls to the contact form. |
+| `VITE_API_URL` | client | Optional: API base URL when the API isn't on the app origin. |
+| `RESEND_API_KEY` | server | Required for the contact form. Set in the host (e.g. Vercel), not exposed to the browser. |
+| `RESEND_FROM` | server | Optional From address (defaults to `onboarding@resend.dev`). |
 
 ## Deploy on Vercel
 
-1. Push this repo to GitHub.
-2. In [Vercel](https://vercel.com), import the GitHub repository.
-3. Leave **Build Command** as `npm run build` and **Output Directory** as `dist`.
-4. Add environment variables in Project → Settings → Environment Variables:
-   - `RESEND_API_KEY` (required for contact form)
-   - `VITE_CALCOM_LINK` (for Book a Call link)
-   - Optionally `RESEND_FROM`, `VITE_API_URL`
-5. Deploy. The `/api/send-message` serverless function will run on Vercel.
+The repo is connected to Vercel — pushes to `main` deploy to production automatically.
+The `vercel.json` SPA rewrite makes client routes like `/studio-work` resolve on refresh,
+while `/api/*` stays routed to the serverless function.
+
+For a fresh setup: import the GitHub repo in Vercel (framework preset **Vite**, build
+`npm run build`, output `dist`), then add `RESEND_API_KEY` and `VITE_CALCOM_LINK` under
+Project → Settings → Environment Variables.
 
 ## Project structure
 
-- `src/` – React app (pages, components, styles)
-- `api/` – Vercel serverless functions (Resend contact form)
-- `public/` – Static assets (favicon, etc.)
+```
+src/
+  pages/        Index (home) and Work (/studio-work gallery)
+  components/   Sections (Hero, Studio, TechStack, …) + shadcn ui/
+  data/         studioWork.ts — showreel video metadata
+  index.css     Design tokens + global styles
+api/            Vercel serverless functions (Resend contact form)
+public/
+  studio/videos/  Studio showreel clips + poster frames
+```
