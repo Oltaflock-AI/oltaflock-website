@@ -1,42 +1,11 @@
-import { useEffect, useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
+import CountUp from '@/components/ui/count-up';
 
 const STATS = [
   { prefix: '', value: 80, suffix: '%', t: 'of support tickets resolved instantly' },
   { prefix: '+', value: 340, suffix: '%', t: 'efficiency gains for clients' },
   { prefix: '', value: 10, suffix: '+ hrs', t: 'reclaimed weekly, from day one' },
 ];
-
-const CountUp = ({ value, prefix, suffix }: { value: number; prefix: string; suffix: string }) => {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true, margin: '-60px' });
-  const [n, setN] = useState(0);
-
-  useEffect(() => {
-    if (!inView) return;
-    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setN(value);
-      return;
-    }
-    let raf = 0;
-    const duration = 1100;
-    const start = performance.now();
-    const tick = (now: number) => {
-      const p = Math.min((now - start) / duration, 1);
-      const eased = 1 - Math.pow(1 - p, 3);
-      setN(Math.round(eased * value));
-      if (p < 1) raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, [inView, value]);
-
-  return (
-    <span ref={ref}>
-      {prefix}{n}{suffix}
-    </span>
-  );
-};
 
 const StatsBar = () => {
   return (

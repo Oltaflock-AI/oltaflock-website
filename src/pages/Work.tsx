@@ -6,9 +6,18 @@ import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HoverVideo from '@/components/HoverVideo';
+import CountUp from '@/components/ui/count-up';
+import { Reveal } from '@/components/ui/reveal';
 import { studioVideos } from '@/data/studioWork';
 
 const filters = ['All', 'Automotive', 'Product travel', 'Live-action', 'Stylized', 'Product'] as const;
+
+const studioStats = [
+  { value: studioVideos.length, suffix: '', label: 'AI-generated clips' },
+  { value: new Set(studioVideos.map((v) => v.tag)).size, suffix: '', label: 'creative categories' },
+  { value: 100, suffix: '%', label: 'generated in-house' },
+  { value: 24, suffix: '/7', label: 'production pipeline' },
+];
 
 const Work = () => {
   const [active, setActive] = useState<(typeof filters)[number]>('All');
@@ -75,16 +84,31 @@ const Work = () => {
           </motion.div>
         </section>
 
-        {/* Video gallery */}
+        {/* Stats — count up as they scroll into view */}
+        <section className="section-container mt-10">
+          <Reveal className="grid grid-cols-2 lg:grid-cols-4 border-t border-l border-border rounded-xl overflow-hidden bg-card">
+            {studioStats.map((s) => (
+              <div key={s.label} className="p-6 sm:p-7 border-b border-r border-border">
+                <div className="font-display font-extrabold text-3xl sm:text-4xl tracking-tight tabular-nums">
+                  <CountUp value={s.value} suffix={s.suffix} />
+                </div>
+                <p className="mt-1.5 text-[13.5px] text-muted-foreground">{s.label}</p>
+              </div>
+            ))}
+          </Reveal>
+        </section>
+
+        {/* Video gallery — tiles reveal as you scroll down the grid */}
         <section className="section-container mt-10">
           <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {visible.map((v, i) => (
               <motion.div
                 key={v.id}
                 layout
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: (i % 6) * 0.04 }}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, delay: (i % 3) * 0.06, ease: [0.22, 1, 0.36, 1] }}
               >
                 <HoverVideo {...v} className="aspect-video" />
               </motion.div>

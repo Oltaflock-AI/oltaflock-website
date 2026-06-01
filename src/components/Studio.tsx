@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Clapperboard, Image as ImageIcon, Megaphone, Crop, ArrowRight } from 'lucide-react';
 import HoverVideo from '@/components/HoverVideo';
+import { Reveal, StaggerGroup, StaggerItem } from '@/components/ui/reveal';
 import { featuredVideos } from '@/data/studioWork';
 
 const capabilities = [
@@ -32,40 +33,36 @@ const Studio = () => {
           </p>
         </motion.div>
 
-        {/* Capability strip */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-2 lg:grid-cols-4 border-t border-l border-border rounded-xl overflow-hidden bg-card mb-6"
-        >
+        {/* Capability strip — staggers in as you scroll */}
+        <StaggerGroup className="grid grid-cols-2 lg:grid-cols-4 border-t border-l border-border rounded-xl overflow-hidden bg-card mb-6">
           {capabilities.map((c) => (
-            <div key={c.label} className="flex items-center gap-3 p-4 border-b border-r border-border">
-              <c.icon className="text-primary shrink-0" size={18} />
+            <StaggerItem
+              key={c.label}
+              className="group flex items-center gap-3 p-4 border-b border-r border-border hover:bg-secondary/50 transition-colors"
+            >
+              <c.icon
+                className="text-primary shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6"
+                size={18}
+              />
               <span className="text-sm font-medium">{c.label}</span>
-            </div>
+            </StaggerItem>
           ))}
-        </motion.div>
+        </StaggerGroup>
 
         {/* Showcase reel — featured clip autoplays in view, the rest play on hover */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.55 }}
-          className="grid lg:grid-cols-3 gap-4"
-        >
-          <HoverVideo
-            {...featuredVideos[0]}
-            featured
-            className="lg:col-span-2 aspect-video"
-          />
+        <StaggerGroup stagger={0.12} className="grid lg:grid-cols-3 gap-4">
+          <StaggerItem className="lg:col-span-2">
+            <HoverVideo {...featuredVideos[0]} featured className="aspect-video" />
+          </StaggerItem>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-            <HoverVideo {...featuredVideos[1]} className="aspect-video" />
-            <HoverVideo {...featuredVideos[2]} className="aspect-video" />
+            <StaggerItem>
+              <HoverVideo {...featuredVideos[1]} className="aspect-video" />
+            </StaggerItem>
+            <StaggerItem>
+              <HoverVideo {...featuredVideos[2]} className="aspect-video" />
+            </StaggerItem>
           </div>
-        </motion.div>
+        </StaggerGroup>
 
         <div className="mt-8 flex justify-center sm:justify-start">
           <Link to="/studio-work" className="btn-primary group inline-flex items-center gap-2">

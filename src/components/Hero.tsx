@@ -22,10 +22,10 @@ const Hero = () => {
     <section className="relative pt-28 pb-12 sm:pt-32 sm:pb-16 overflow-hidden">
       {/* Subtle modular grid, fading out — replaces the old particle/mesh noise */}
       <div
-        className="absolute inset-0 grid-fade opacity-[0.5] dark:opacity-[0.35] pointer-events-none"
+        className="absolute inset-0 grid-fade opacity-[0.6] dark:opacity-[0.4] pointer-events-none"
         style={{
-          maskImage: 'radial-gradient(ellipse 70% 55% at 50% 0%, #000 10%, transparent 72%)',
-          WebkitMaskImage: 'radial-gradient(ellipse 70% 55% at 50% 0%, #000 10%, transparent 72%)',
+          maskImage: 'radial-gradient(ellipse 95% 78% at 50% 0%, #000 18%, transparent 82%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 95% 78% at 50% 0%, #000 18%, transparent 82%)',
         }}
       />
 
