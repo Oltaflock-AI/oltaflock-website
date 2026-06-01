@@ -68,7 +68,17 @@ const Footer = () => {
             © {new Date().getFullYear()} OLTAFLOCK AI LLP · LLPIN ACV-6705 · GSTIN 24AAKFO1104B1Z1
           </p>
           <p className="text-faint text-[12.5px] font-mono">
-            admin@oltaflock.ai · +91 95895 94181 · Ahmedabad, Gujarat
+            <a href="mailto:admin@oltaflock.ai" className="hover:text-foreground transition-colors">
+              admin@oltaflock.ai
+            </a>{' '}·{' '}
+            <a
+              href="https://wa.me/919589594181?text=Hello%20Oltaflock%20AI%2C%20I%27d%20like%20to%20know%20more."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              +91 95895 94181
+            </a>{' '}· Ahmedabad, Gujarat
           </p>
         </div>
       </div>
