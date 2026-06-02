@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Head } from 'vite-react-ssg';
 import { motion } from 'framer-motion';
@@ -6,7 +6,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import HoverVideo from '@/components/HoverVideo';
+import HexGallery from '@/components/HexGallery';
 import StudioGallery from '@/components/StudioGallery';
 import CountUp from '@/components/ui/count-up';
 import { Reveal } from '@/components/ui/reveal';
@@ -28,11 +28,6 @@ const studioStats = [
 
 const Work = () => {
   const [active, setActive] = useState<(typeof filters)[number]>('All');
-
-  const visible = useMemo(
-    () => (active === 'All' ? studioVideos : studioVideos.filter((v) => v.tag === active)),
-    [active]
-  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -104,22 +99,9 @@ const Work = () => {
           </Reveal>
         </section>
 
-        {/* Video gallery — tiles reveal as you scroll down the grid */}
+        {/* Reel — interactive fisheye honeycomb (drag to roam, tap to focus) */}
         <section className="section-container mt-10">
-          <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {visible.map((v, i) => (
-              <motion.div
-                key={v.id}
-                layout
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 0.5, delay: (i % 3) * 0.06, ease: [0.22, 1, 0.36, 1] }}
-              >
-                <HoverVideo {...v} className="aspect-video" />
-              </motion.div>
-            ))}
-          </motion.div>
+          <HexGallery videos={studioVideos} activeTag={active} />
         </section>
 
         {/* Image portfolio — brand stills */}
