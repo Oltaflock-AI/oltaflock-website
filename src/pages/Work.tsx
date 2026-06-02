@@ -7,6 +7,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HoverVideo from '@/components/HoverVideo';
+import StudioGallery from '@/components/StudioGallery';
 import CountUp from '@/components/ui/count-up';
 import { Reveal } from '@/components/ui/reveal';
 import { studioVideos } from '@/data/studioWork';
@@ -119,6 +120,19 @@ const Work = () => {
               </motion.div>
             ))}
           </motion.div>
+        </section>
+
+        {/* Image portfolio — brand stills */}
+        <section className="section-container mt-16 sm:mt-20">
+          <Reveal className="mb-8 max-w-2xl">
+            <p className="klabel mb-3">Stills</p>
+            <h2 className="font-display text-2xl font-bold sm:text-3xl">Brand campaign imagery</h2>
+            <p className="mt-3 text-muted-foreground">
+              Generative product and lifestyle stills crafted for brands — every frame produced in-house at
+              Oltaflock Studio. Tap any image to view it full screen.
+            </p>
+          </Reveal>
+          <StudioGallery />
         </section>
 
         {/* CTA */}
