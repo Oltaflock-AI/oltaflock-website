@@ -41,6 +41,10 @@ Key capabilities:
 - Business-logic driven - every automation mirrors your real operations
 - Enterprise-grade security with encrypted data flows and audit logging
 
+## Free Tools
+
+- [Automation ROI Calculator](https://oltaflock.ai/automation-roi-calculator): Free calculator that estimates what manual work costs a business each year. Select the tasks a team does by hand — lead follow-up, CRM data entry, repeat support replies, manual reporting, quotes and invoices, approvals and onboarding, copy-pasting between tools, lead qualification — set hours per week, people involved, and hourly staff cost in USD or INR. Annual cost is hours x people x 52 weeks x hourly cost, and only the automatable share of each task counts toward the total. No signup required and the full per-task breakdown is shown on the page.
+
 ## Getting Started
 
 - [Contact Us](https://oltaflock.ai/#send-message): Send a message to get a personalised automation assessment, custom strategy, and ROI projection

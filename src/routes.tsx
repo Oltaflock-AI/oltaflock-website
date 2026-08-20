@@ -14,6 +14,10 @@ export const routes: RouteRecord[] = [
     children: [
       { index: true, Component: Index, entry: 'src/pages/Index.tsx' },
       { path: 'faq', lazy: lazyDefault(() => import('./pages/FAQ')) },
+      {
+        path: 'automation-roi-calculator',
+        lazy: lazyDefault(() => import('./pages/Calculator')),
+      },
       { path: 'privacy', lazy: lazyDefault(() => import('./pages/Privacy')) },
       { path: 'terms', lazy: lazyDefault(() => import('./pages/Terms')) },
       { path: '*', lazy: lazyDefault(() => import('./pages/NotFound')) },

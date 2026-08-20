@@ -8,6 +8,7 @@ const navLinks = [
   { name: 'Services', href: '/#services' },
   { name: 'Process', href: '/#process' },
   { name: 'Why Us', href: '/#why-us' },
+  { name: 'ROI Calculator', href: '/automation-roi-calculator', route: true },
   { name: 'FAQ', href: '/faq', route: true },
 ];
 
