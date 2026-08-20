@@ -4,7 +4,9 @@ import { ClientOnly } from 'vite-react-ssg';
 import Cal, { getCalApi } from '@calcom/embed-react';
 
 const CAL_NAMESPACE = 'oltaflock-ai-demo';
-const CAL_LINK = 'khush0030/oltaflock-ai-demo';
+// Falls back to the literal slug so the embed still works on a build where
+// VITE_CALCOM_LINK was not set — the nav and calculator buttons read the same var.
+const CAL_LINK = import.meta.env.VITE_CALCOM_LINK || 'khush0030/oltaflock-ai-demo';
 
 const BookCall = () => {
   const [isDark, setIsDark] = useState(false);
