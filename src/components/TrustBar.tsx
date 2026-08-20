@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 
 const clients = [
-  { name: 'Alyra', logo: '/alyra.png' },
   { name: 'Cee Dee Vacuum', logo: '/cee-dee-logo.png' },
   { name: 'Promunch', logo: '/promunch.png' },
-  { name: 'TinyTi', logo: '/tinyti.png' },
+  { name: 'Rise & Shine Travels', logo: '/rise-and-shine.png' },
+  { name: 'Sarthak Singapore', logo: '/sarthak.png' },
   { name: 'Vippy Spinpro', logo: '/vippyspinpro.png' },
 ];
 
