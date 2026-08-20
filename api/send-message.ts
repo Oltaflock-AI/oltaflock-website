@@ -1,23 +1,7 @@
 import { Resend } from 'resend';
+import { escapeHtml, json } from './_shared.js';
 
 const TO_EMAIL = 'admin@oltaflock.ai';
-
-const json = (body: object, status: number, init?: ResponseInit) =>
-  new Response(JSON.stringify(body), {
-    status,
-    headers: { 'Content-Type': 'application/json', ...init?.headers },
-  });
-
-function escapeHtml(text: string): string {
-  const map: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;',
-  };
-  return String(text).replace(/[&<>"']/g, (m) => map[m]);
-}
 
 export default {
   async fetch(request: Request): Promise<Response> {

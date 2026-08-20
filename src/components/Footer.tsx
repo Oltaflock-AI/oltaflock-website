@@ -66,7 +66,10 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="mt-4 flex sm:justify-end gap-x-5">
+        <div className="mt-4 flex flex-wrap sm:justify-end gap-x-5 gap-y-2">
+          <Link to="/automation-roi-calculator" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
+            ROI Calculator
+          </Link>
           <Link to="/privacy" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
             Privacy Policy
           </Link>
