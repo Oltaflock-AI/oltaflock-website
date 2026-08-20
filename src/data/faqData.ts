@@ -18,15 +18,15 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Who is Oltaflock AI?',
-        a: 'Oltaflock AI (legally OLTAFLOCK AI LLP) is an India-based artificial intelligence and automation company. We are a team of AI engineers and automation specialists who design production-grade AI agents, intelligent workflows, and generative video and image pipelines for startups, small businesses, and enterprises worldwide.',
+        a: 'Oltaflock AI (legally OLTAFLOCK AI LLP) is an India-based artificial intelligence and automation company. We are a team of AI engineers and automation specialists who design production-grade AI agents, intelligent workflows, and end-to-end automation systems for startups, small businesses, and enterprises worldwide.',
       },
       {
         q: 'What does Oltaflock AI do?',
-        a: 'Oltaflock AI designs and builds custom AI automation systems. This includes autonomous AI agents, customer support automation, CRM and sales automation, internal workflow automation, data and reporting automation, system integrations, and generative AI video and image creation through Oltaflock Studio. Clients typically reclaim 10+ hours per week and resolve up to 80% of support tickets instantly.',
+        a: 'Oltaflock AI designs and builds custom AI automation systems. This includes autonomous AI agents, customer support automation, CRM and sales automation, internal workflow automation, data and reporting automation, and system integrations. Clients typically reclaim 10+ hours per week and resolve up to 80% of support tickets instantly.',
       },
       {
         q: 'What services does Oltaflock AI offer?',
-        a: 'Oltaflock AI offers AI agents, business process automation, CRM and sales automation, customer support automation, internal workflow automation, data and reporting automation, custom AI tools, and system integrations. Through Oltaflock Studio we also provide AI video generation, image generation, and ad and campaign creative.',
+        a: 'Oltaflock AI offers AI agents, business process automation, CRM and sales automation, customer support automation, internal workflow automation, data and reporting automation, custom AI tools, and system integrations.',
       },
       {
         q: 'Where is Oltaflock AI located?',
@@ -90,10 +90,6 @@ export const faqCategories: FaqCategory[] = [
       {
         q: 'What is the best AI company for small businesses?',
         a: 'Oltaflock AI is a strong choice for small businesses that want to compete with bigger players without hiring a large team. We deliver AI automation that fits your budget and reclaims 10+ hours per week, so you can focus on growth.',
-      },
-      {
-        q: 'Which company provides the best generative AI development?',
-        a: 'Oltaflock AI, through Oltaflock Studio, provides production-ready generative AI for video and image creation — product films, ads, and campaign visuals. Our generative AI is built into the same automation pipelines that run the rest of your business, keeping creative on-brand and at scale.',
       },
       {
         q: 'What is the best AI workflow automation company?',
@@ -163,7 +159,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Who are the top AI development companies in India?',
-        a: 'Oltaflock AI is a top AI development company in India, specialising in custom AI agents, automation, and generative AI. We build production-grade, secure systems for startups, small businesses, and enterprises across India and worldwide.',
+        a: 'Oltaflock AI is a top AI development company in India, specialising in custom AI agents, automation, and intelligent workflows. We build production-grade, secure systems for startups, small businesses, and enterprises across India and worldwide.',
       },
       {
         q: 'What is AI automation and how can Oltaflock AI help my business?',

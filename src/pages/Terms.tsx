@@ -9,7 +9,7 @@ const Terms = () => {
     >
       <p>
         These Terms &amp; Conditions ("Terms") govern your use of <a href="https://oltaflock.ai">oltaflock.ai</a>{' '}
-        (the "Site") and the AI automation and studio services (the "Services") provided by{' '}
+        (the "Site") and the AI automation services (the "Services") provided by{' '}
         <strong>Oltaflock AI LLP</strong> ("Oltaflock", "we", "us", or "our"). By accessing the Site or
         engaging our Services, you agree to these Terms.
       </p>

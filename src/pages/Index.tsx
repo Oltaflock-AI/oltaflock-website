@@ -10,7 +10,6 @@ import WhyUs from '@/components/WhyUs';
 import TechStack from '@/components/TechStack';
 import NvidiaInception from '@/components/NvidiaInception';
 import UseCases from '@/components/UseCases';
-import Studio from '@/components/Studio';
 import FAQ from '@/components/FAQ';
 import BookCall from '@/components/BookCall';
 import Footer from '@/components/Footer';
@@ -49,7 +48,6 @@ const Index = () => {
         <TechStack />
         <NvidiaInception />
         <UseCases />
-        <Studio />
         <FAQ />
         <BookCall />
       </main>

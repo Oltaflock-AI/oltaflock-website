@@ -8,8 +8,6 @@ const navLinks = [
   { name: 'Services', href: '/#services' },
   { name: 'Process', href: '/#process' },
   { name: 'Why Us', href: '/#why-us' },
-  { name: 'Studio', href: '/#studio' },
-  { name: 'Work', href: '/studio-work', route: true },
   { name: 'FAQ', href: '/faq', route: true },
 ];
 

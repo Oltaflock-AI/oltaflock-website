@@ -13,7 +13,6 @@ export const routes: RouteRecord[] = [
     entry: 'src/App.tsx',
     children: [
       { index: true, Component: Index, entry: 'src/pages/Index.tsx' },
-      { path: 'studio-work', lazy: lazyDefault(() => import('./pages/Work')) },
       { path: 'faq', lazy: lazyDefault(() => import('./pages/FAQ')) },
       { path: 'privacy', lazy: lazyDefault(() => import('./pages/Privacy')) },
       { path: 'terms', lazy: lazyDefault(() => import('./pages/Terms')) },

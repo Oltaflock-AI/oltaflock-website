@@ -10,8 +10,8 @@ const Privacy = () => {
       <p>
         This Privacy Policy explains how <strong>Oltaflock AI LLP</strong> ("Oltaflock", "we", "us",
         or "our") collects, uses, and protects information when you visit{' '}
-        <a href="https://oltaflock.ai">oltaflock.ai</a> (the "Site") or engage our AI automation and
-        studio services (the "Services"). By using the Site or Services, you agree to the practices
+        <a href="https://oltaflock.ai">oltaflock.ai</a> (the "Site") or engage our AI automation
+        services (the "Services"). By using the Site or Services, you agree to the practices
         described here.
       </p>
 
@@ -24,7 +24,7 @@ const Privacy = () => {
         </li>
         <li>
           <strong>Project information</strong> — details you share so we can scope, build, or operate
-          an AI system or studio deliverable for you.
+          an AI system or deliverable for you.
         </li>
       </ul>
       <h3>Information collected automatically</h3>
