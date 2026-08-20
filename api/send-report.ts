@@ -1,15 +1,15 @@
 import { resolveMx } from 'node:dns/promises';
 import { Resend } from 'resend';
-import { escapeHtml, json } from './_shared';
-import { checkEmail } from '../src/lib/emailValidation';
+import { escapeHtml, json } from './_shared.js';
+import { checkEmail } from '../src/lib/emailValidation.js';
 import {
   CURRENCIES,
   TASKS_BY_ID,
   WEEKS_PER_YEAR,
   computeLeak,
   formatMoney,
-} from '../src/lib/leakModel';
-import type { CurrencyCode, Inputs, Result } from '../src/lib/leakModel';
+} from '../src/lib/leakModel.js';
+import type { CurrencyCode, Inputs, Result } from '../src/lib/leakModel.js';
 
 const TO_EMAIL = 'admin@oltaflock.ai';
 const SITE = 'https://oltaflock.ai';

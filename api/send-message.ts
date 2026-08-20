@@ -1,5 +1,5 @@
 import { Resend } from 'resend';
-import { escapeHtml, json } from './_shared';
+import { escapeHtml, json } from './_shared.js';
 
 const TO_EMAIL = 'admin@oltaflock.ai';
 
