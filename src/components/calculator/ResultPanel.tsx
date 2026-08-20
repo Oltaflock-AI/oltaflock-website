@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useReducedMotion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import type { Result } from '@/lib/leakModel';
+import type { Inputs, Result } from '@/lib/leakModel';
 import { WEEKS_PER_YEAR, formatMoney } from '@/lib/leakModel';
+import ReportForm from './ReportForm';
 
 /**
  * Tweens whenever the value changes, unlike the site's CountUp which fires once
@@ -45,7 +46,7 @@ const AnimatedMoney = ({ value, result }: { value: number; result: Result }) => 
 const bookCallLink = import.meta.env.VITE_CALCOM_LINK ?? '';
 const bookCallHref = bookCallLink ? `https://cal.com/${bookCallLink}` : '/#send-message';
 
-const ResultPanel = ({ result }: { result: Result }) => {
+const ResultPanel = ({ result, inputs }: { result: Result; inputs: Inputs }) => {
   const empty = result.perTask.length === 0;
 
   return (
@@ -149,6 +150,10 @@ const ResultPanel = ({ result }: { result: Result }) => {
         <p className="mt-3 text-faint text-[12px] text-center">
           Free 30-minute call. We will tell you which of these is worth doing first.
         </p>
+      </div>
+
+      <div className="p-6 border-t border-border bg-secondary/30">
+        <ReportForm inputs={inputs} disabled={empty} />
       </div>
 
       <div className="px-6 pb-6">

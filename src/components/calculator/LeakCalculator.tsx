@@ -106,7 +106,7 @@ const LeakCalculator = () => {
       </div>
 
       <div id="calculator-result" className="scroll-mt-24">
-        <ResultPanel result={result} />
+        <ResultPanel result={result} inputs={inputs} />
       </div>
 
       {/*
