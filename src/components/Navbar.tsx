@@ -12,10 +12,9 @@ const navLinks = [
   { name: 'FAQ', href: '/faq', route: true },
 ];
 
-const calComLink = import.meta.env.VITE_CALCOM_LINK ?? '';
-const bookCallHref = calComLink ? `https://cal.com/${calComLink}` : '#send-message';
-const bookCallTarget = calComLink ? '_blank' : '_self';
-const bookCallRel = calComLink ? 'noopener noreferrer' : undefined;
+// Book a Call scrolls to the Cal.com embed at the bottom of the home page
+// instead of opening cal.com in a new tab.
+const bookCallHref = '/#send-message';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,7 +68,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center gap-3">
             <Magnetic>
-              <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary">
+              <a href={bookCallHref} className="btn-primary">
                 Book a Call
               </a>
             </Magnetic>
@@ -117,7 +116,11 @@ const Navbar = () => {
                   </a>
                 )
               )}
-              <a href={bookCallHref} target={bookCallTarget} rel={bookCallRel} className="btn-primary mt-3">
+              <a
+                href={bookCallHref}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="btn-primary mt-3"
+              >
                 Book a Call
               </a>
             </div>

@@ -15,6 +15,11 @@ const TO_EMAIL = 'admin@oltaflock.ai';
 const SITE = 'https://oltaflock.ai';
 const CALCULATOR_URL = `${SITE}/automation-roi-calculator`;
 
+// Same slug the navbar and the calculator CTA use. Vercel exposes every project
+// env var to the function, so this stays in step with the buttons on the site.
+const CAL_SLUG = process.env.VITE_CALCOM_LINK || 'khush0030/oltaflock-ai-demo';
+const BOOK_CALL_URL = `https://cal.com/${CAL_SLUG}`;
+
 /** Guards against a payload large enough to be an attack rather than a form. */
 const MAX_BODY_BYTES = 8_000;
 
@@ -141,7 +146,7 @@ function prospectEmail(result: Result, name?: string): string {
     ${recommendations(result)}
 
     <p style="margin:28px 0;">
-      <a href="${SITE}/#send-message"
+      <a href="${BOOK_CALL_URL}"
          style="background:#111;color:#fff;text-decoration:none;padding:12px 20px;border-radius:8px;font-size:14px;display:inline-block;">
         Book a free 30-minute call
       </a>
