@@ -47,6 +47,7 @@ inside `useEffect`, or the SSG build breaks.
 | File | Responsibility |
 |---|---|
 | `src/lib/leakModel.ts` | Pure module: task presets, currency presets, `computeLeak(inputs)`. No React imports. Unit tested. |
+| `src/lib/emailValidation.ts` | Pure module: the shared regex, the length and dot rules, the disposable-domain blocklist, and a `personal` / `business` classifier. No Node imports, so both the browser and the function can use it. Unit tested. |
 | `src/pages/Calculator.tsx` | Page shell: `<Head>`, hero copy, calculator, mini-FAQ, closing CTA |
 | `src/components/calculator/LeakCalculator.tsx` | Owns input state, lays out task list beside result panel |
 | `src/components/calculator/TaskRow.tsx` | One task: enable toggle, hours/week slider, people slider, automatable % badge |
@@ -57,6 +58,21 @@ inside `useEffect`, or the SSG build breaks.
 
 Extracting `api/_shared.ts` is the only refactor in scope. It exists because
 `send-report.ts` would otherwise copy both helpers verbatim.
+
+### Cross-import risk
+
+`api/send-report.ts` imports `src/lib/leakModel.ts` and
+`src/lib/emailValidation.ts` by relative path so that the browser and the
+function share one source of truth. The existing `api/send-message.ts` imports
+no local module, so this path is unproven in this repo and Vercel's function
+bundler must be confirmed to follow it.
+
+This is the first thing to verify in implementation — a hello-world import from
+`api/` into `src/lib/`, deployed to a preview, before any calculator code is
+written. If the bundler will not follow it, the fallback is to move both pure
+modules to a top-level `shared/` directory referenced by a `tsconfig` path alias
+from both sides. Duplicating the modules is not acceptable: the whole point of
+server-side recomputation is that both sides run identical math.
 
 ## Data model
 
@@ -214,9 +230,12 @@ The repo currently has no test runner. Add `vitest` as a dev dependency with an
 - Empty state returns zeros and an empty `perTask`
 - `topThree` ordering, including the tie-break, and fewer than three enabled tasks
 
-The email validator's pure parts (regex, length rules, disposable blocklist) are
-exported from a small module and tested alongside it. The MX lookup is not unit
-tested; it is exercised manually.
+`src/lib/emailValidation.ts` is tested alongside it: valid addresses pass,
+malformed ones fail (missing `@`, double dot, leading dot, over-length local
+part, spaces, trailing dot), disposable domains are rejected, and free providers
+classify as `personal` while everything else classifies as `business`. The MX
+lookup lives only in the function and is not unit tested; it is exercised
+manually against a real domain and a typo domain such as `gmial.com`.
 
 Gates before merge: `npm test`, `tsc --noEmit`, `npm run lint`, and a full
 `npm run build` to confirm the new route prerenders with its own title and
