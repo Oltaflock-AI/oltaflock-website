@@ -44,7 +44,7 @@ const NvidiaInception = () => {
 
           <div className="sm:flex-1 sm:border-l sm:border-border sm:pl-5">
             <p className="text-muted-foreground text-sm">
-              A member of NVIDIA's program for cutting-edge AI startups — giving us advanced compute,
+              A member of NVIDIA's program for cutting-edge AI startups, giving us advanced compute,
               tooling, and infrastructure that we build directly into the systems we ship for you.
             </p>
           </div>

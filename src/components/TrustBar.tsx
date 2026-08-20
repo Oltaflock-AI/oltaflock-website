@@ -33,7 +33,7 @@ const TrustBar = () => {
             >
               <img
                 src={client.logo}
-                alt={`${client.name} — client of Oltaflock AI`}
+                alt={`${client.name}, client of Oltaflock AI`}
                 className="h-12 w-auto max-w-[120px] object-contain transition-transform duration-300 group-hover:scale-[1.06]"
                 loading="lazy"
                 width={120}

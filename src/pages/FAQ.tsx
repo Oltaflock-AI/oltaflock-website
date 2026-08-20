@@ -9,9 +9,9 @@ import { faqCategories, allFaqs } from '@/data/faqData';
 
 const SITE = 'https://oltaflock.ai';
 const PAGE_URL = `${SITE}/faq`;
-const TITLE = 'FAQ — Oltaflock AI | AI Automation & AI Agent Development (India)';
+const TITLE = 'FAQ | Oltaflock AI | AI Automation & AI Agent Development (India)';
 const DESC =
-  'Answers about Oltaflock AI, a custom AI automation and AI agent development company in Ahmedabad, India — services, pricing, timelines, AI workflows, and orchestration.';
+  'Answers about Oltaflock AI, a custom AI automation and AI agent development company in Ahmedabad, India: services, pricing, timelines, AI workflows, and orchestration.';
 
 // FAQPage structured data — emitted into the prerendered HTML for rich results.
 const faqLd = {
@@ -19,7 +19,7 @@ const faqLd = {
   '@type': 'FAQPage',
   '@id': `${PAGE_URL}#faq`,
   url: PAGE_URL,
-  name: 'Oltaflock AI — Frequently Asked Questions',
+  name: 'Oltaflock AI Frequently Asked Questions',
   inLanguage: 'en',
   mainEntity: allFaqs.map((f) => ({
     '@type': 'Question',
@@ -53,7 +53,7 @@ const FAQ = () => {
               Frequently asked <span className="text-primary">questions.</span>
             </h1>
             <p className="mt-4 text-muted-foreground text-lg">
-              Everything about Oltaflock AI — a custom AI automation and AI agent development company based
+              Everything about Oltaflock AI, a custom AI automation and AI agent development company based
               in Ahmedabad, India. Can&apos;t find your answer?{' '}
               <a href="/#send-message" className="text-foreground underline underline-offset-2 hover:text-primary">
                 Get in touch

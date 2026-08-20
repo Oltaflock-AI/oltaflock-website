@@ -5,7 +5,7 @@ const Terms = () => {
     <LegalPage
       title="Terms & Conditions"
       updated="1 June 2026"
-      docTitle="Terms & Conditions — Oltaflock AI"
+      docTitle="Terms & Conditions | Oltaflock AI"
     >
       <p>
         These Terms &amp; Conditions ("Terms") govern your use of <a href="https://oltaflock.ai">oltaflock.ai</a>{' '}

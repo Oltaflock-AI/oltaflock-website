@@ -4,7 +4,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 const steps = [
   { number: '01', label: 'Analyze', title: 'Discovery & Workflow Mapping', description: 'We analyze your workflows, tools, bottlenecks, and growth objectives to uncover high-ROI automation opportunities.' },
   { number: '02', label: 'Architect', title: 'System Architecture & AI Design', description: 'We design a production-grade AI + automation architecture tailored to your business logic, scale, and reliability needs.' },
-  { number: '03', label: 'Build', title: 'Development & System Build', description: 'We engineer robust AI pipelines, automation workflows, dashboards, and intelligent agents — built for performance and scale.' },
+  { number: '03', label: 'Build', title: 'Development & System Build', description: 'We engineer robust AI pipelines, automation workflows, dashboards, and intelligent agents, built for performance and scale.' },
   { number: '04', label: 'Launch', title: 'Testing, Deployment & Integration', description: 'We rigorously test, deploy, and integrate your system into existing tools to ensure reliability and zero disruption.' },
   { number: '05', label: 'Scale', title: 'Optimization, Monitoring & Scale', description: 'We continuously monitor, optimize, and evolve your automation systems to maximize ROI and support long-term growth.' },
 ];

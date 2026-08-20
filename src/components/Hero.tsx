@@ -55,8 +55,10 @@ const Hero = () => {
           animate="show"
           className="mt-7 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto"
         >
-          Our <strong className="text-foreground font-semibold">AI agents</strong> resolve 80% of customer
-          inquiries instantly. Business automation that reclaims <strong className="text-foreground font-semibold">10+ hours every week</strong> from day one.
+          Our <strong className="text-foreground font-semibold">AI agents</strong> answer every call and follow up on
+          every lead in <strong className="text-foreground font-semibold">90 seconds, not four hours</strong>. For one
+          travel agency that was <strong className="text-foreground font-semibold">+43% monthly revenue</strong> and 576
+          hours a year back.
         </motion.p>
 
         <motion.p
@@ -66,7 +68,7 @@ const Hero = () => {
           animate="show"
           className="mt-3 font-mono text-[13px] text-primary"
         >
-          Custom AI systems · workflow automation · 24/7 · production-grade · no templates
+          Custom AI systems · workflow automation · 24/7 · live in 7 days · no templates
         </motion.p>
 
         <motion.div

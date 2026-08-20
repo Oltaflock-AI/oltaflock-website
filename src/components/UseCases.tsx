@@ -11,11 +11,11 @@ const segments = [
 ];
 
 const useCases = [
-  { icon: MessageCircle, title: 'AI Customer Support Agent', benefit: 'Resolve 80% instantly', description: 'Intelligent chatbot handling FAQs, troubleshooting, and seamless escalation.' },
-  { icon: Mail, title: 'Sales Follow-up Automation', benefit: 'Never miss a lead', description: 'Automated sequences that nurture leads with personalized, timely messages.' },
+  { icon: MessageCircle, title: 'AI Customer Support Agent', benefit: '100% of calls answered', description: 'Intelligent chatbot handling FAQs, troubleshooting, and seamless escalation.' },
+  { icon: Mail, title: 'Sales Follow-up Automation', benefit: 'First reply in 90 sec', description: 'Automated sequences that nurture leads with personalized, timely messages.' },
   { icon: RefreshCcw, title: 'CRM Auto-Sync', benefit: 'Zero manual entry', description: 'Real-time synchronization across all your business tools and platforms.' },
   { icon: UserCheck, title: 'Lead Qualification AI', benefit: 'Focus on hot leads', description: 'AI scoring and routing that prioritizes your highest-value opportunities.' },
-  { icon: ClipboardList, title: 'Internal Task Automation', benefit: 'Reclaim 10+ hrs/wk', description: 'Automated approvals, assignments, and notifications for smooth operations.' },
+  { icon: ClipboardList, title: 'Internal Task Automation', benefit: 'Save 48 hrs/month', description: 'Automated approvals, assignments, and notifications for smooth operations.' },
   { icon: LayoutDashboard, title: 'Real-Time Dashboards', benefit: 'Instant insight', description: 'Live dashboards pulling data from all sources for informed decisions.' },
 ];
 

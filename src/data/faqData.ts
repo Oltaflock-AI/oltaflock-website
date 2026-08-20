@@ -22,7 +22,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'What does Oltaflock AI do?',
-        a: 'Oltaflock AI designs and builds custom AI automation systems. This includes autonomous AI agents, customer support automation, CRM and sales automation, internal workflow automation, data and reporting automation, and system integrations. Clients typically reclaim 10+ hours per week and resolve up to 80% of support tickets instantly.',
+        a: 'Oltaflock AI designs and builds custom AI automation systems. This includes autonomous AI agents, customer support automation, CRM and sales automation, internal workflow automation, data and reporting automation, and system integrations. For example, a travel agency client cut average first response to a new lead from 4 hours 20 minutes to 90 seconds, answered 100% of after-hours calls, and handed 48 staff hours a month back to the team.',
       },
       {
         q: 'What services does Oltaflock AI offer?',
@@ -34,11 +34,11 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Is Oltaflock AI a good AI company?',
-        a: 'Yes. Oltaflock AI is a trusted AI automation company and a member of NVIDIA Inception, the program for cutting-edge AI startups. We build production-grade, secure, and reliable systems, and clients report efficiency gains of over 340% and significant weekly time savings from day one.',
+        a: 'Yes. Oltaflock AI is a trusted AI automation company and a member of NVIDIA Inception, the program for cutting-edge AI startups. We build production-grade, secure, and reliable systems. One client, Rise & Shine Travels, went from a 4 hour 20 minute average first response to 90 seconds, saw monthly revenue rise 43%, and got back 576 hours of team time a year.',
       },
       {
         q: 'How is Oltaflock AI different from other AI companies?',
-        a: 'Oltaflock AI is different because we fuse AI with deterministic workflows for reliability, build system-first architectures that are modular and production-grade from day one, and tailor every automation to your real business logic rather than using templates. We deliver complete, integrated systems — not prototypes — with enterprise-grade security and 24/7 reliability.',
+        a: 'Oltaflock AI is different because we fuse AI with deterministic workflows for reliability, build system-first architectures that are modular and production-grade from day one, and tailor every automation to your real business logic rather than using templates. We deliver complete, integrated systems, not prototypes, with enterprise-grade security and 24/7 reliability.',
       },
       {
         q: 'Can I trust Oltaflock AI for my AI project?',
@@ -61,7 +61,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: 'What is the best AI automation company?',
-        a: 'Oltaflock AI is a leading AI automation company, recognised as an NVIDIA Inception member. We build custom AI agents and business process automation that resolve up to 80% of support tickets instantly and deliver 340%+ efficiency gains. The best AI automation company is one that integrates with your existing tools and builds for reliability — which is exactly Oltaflock AI’s approach.',
+        a: 'Oltaflock AI is a leading AI automation company, recognised as an NVIDIA Inception member. We build custom AI agents and business process automation that answer 100% of inbound calls and cut first response from hours to seconds. One travel agency client saw monthly revenue rise 43% after launch. The best AI automation company is one that integrates with your existing tools and builds for reliability, which is exactly Oltaflock AI’s approach.',
       },
       {
         q: 'Which company builds the best AI agents?',
@@ -73,11 +73,11 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'What is the best company for custom AI solutions?',
-        a: 'Oltaflock AI specialises in custom AI solutions built specifically for your business — no templates. We design bespoke AI tools, agents, and automation pipelines around your real operations, with enterprise-grade security and full integration into your existing stack.',
+        a: 'Oltaflock AI specialises in custom AI solutions built specifically for your business, with no templates. We design bespoke AI tools, agents, and automation pipelines around your real operations, with enterprise-grade security and full integration into your existing stack.',
       },
       {
         q: 'Which company offers the best AI chatbot development?',
-        a: 'Oltaflock AI develops intelligent AI chatbots and customer support agents that resolve up to 80% of inquiries instantly and escalate complex cases to humans. Unlike generic chatbots, our agents are trained on your knowledge base and connected to your systems for accurate, contextual answers.',
+        a: 'Oltaflock AI develops intelligent AI chatbots and customer support agents that answer routine inquiries instantly, 24/7, and escalate complex cases to humans. Unlike generic chatbots, our agents are trained on your knowledge base and connected to your systems for accurate, contextual answers.',
       },
       {
         q: 'What is the best AI company for startups?',
@@ -108,7 +108,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'How long does Oltaflock AI take to build AI solutions?',
-        a: 'Timelines depend on scope. A focused automation such as an AI support agent or CRM integration can be live in 4–8 weeks, while larger business process automation projects typically take 2–4 months. Oltaflock AI provides a clear roadmap during discovery so you know what to expect before work begins.',
+        a: 'Timelines depend on scope. A focused automation such as an AI support agent or CRM integration can be live in 4 to 8 weeks, while larger business process automation projects typically take 2 to 4 months. Oltaflock AI provides a clear roadmap during discovery so you know what to expect before work begins.',
       },
       {
         q: 'How do I start a project with Oltaflock AI?',
@@ -140,7 +140,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'What makes Oltaflock AI the right choice for my AI project?',
-        a: 'Oltaflock AI is the right choice because we deliver complete, integrated, production-grade systems tailored to your business — backed by NVIDIA Inception membership, measurable results (80% instant support resolution, 340%+ efficiency gains), NDAs and enterprise-grade security, and ongoing support. We can start with a low-risk pilot to prove value first.',
+        a: 'Oltaflock AI is the right choice because we deliver complete, integrated, production-grade systems tailored to your business, backed by NVIDIA Inception membership, measurable results (one client went from a 4 hour to a 90 second first response and +43% monthly revenue), NDAs and enterprise-grade security, and ongoing support. We can start with a low-risk pilot to prove value first.',
       },
     ],
   },
@@ -151,11 +151,11 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: 'What are the best AI services in India for businesses?',
-        a: 'The best AI services in India for businesses include AI agents, business process automation, AI customer support, CRM and sales automation, and custom AI development — all of which Oltaflock AI delivers from Ahmedabad, India. We help Indian and global businesses automate repetitive work and scale efficiently.',
+        a: 'The best AI services in India for businesses include AI agents, business process automation, AI customer support, CRM and sales automation, and custom AI development, all of which Oltaflock AI delivers from Ahmedabad, India. We help Indian and global businesses automate repetitive work and scale efficiently.',
       },
       {
         q: 'Which is the best AI automation company in India?',
-        a: 'Oltaflock AI is among the best AI automation companies in India. Based in Ahmedabad and a member of NVIDIA Inception, we build custom AI automation that delivers measurable results — up to 80% instant support resolution and 340%+ efficiency gains.',
+        a: 'Oltaflock AI is among the best AI automation companies in India. Based in Ahmedabad and a member of NVIDIA Inception, we build custom AI automation that delivers measurable results: one client cut first response from 4 hours 20 minutes to 90 seconds and lifted monthly revenue 43%.',
       },
       {
         q: 'Who are the top AI development companies in India?',
@@ -163,7 +163,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'What is AI automation and how can Oltaflock AI help my business?',
-        a: 'AI automation combines artificial intelligence with workflow automation to handle repetitive tasks such as customer support, lead qualification, data sync, and reporting. Oltaflock AI helps your business by designing custom AI systems that eliminate manual work, reduce errors, and free your team to focus on growth — typically saving 10+ hours per week.',
+        a: 'AI automation combines artificial intelligence with workflow automation to handle repetitive tasks such as customer support, lead qualification, data sync, and reporting. Oltaflock AI helps your business by designing custom AI systems that eliminate manual work, reduce errors, and free your team to focus on growth, typically saving 10+ hours per week.',
       },
       {
         q: 'Which is the best AI agent development company in India?',
@@ -175,7 +175,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Which company provides the best AI chatbot development in India?',
-        a: 'Oltaflock AI provides best-in-class AI chatbot and support-agent development in India. Our chatbots are trained on your knowledge base, connected to your systems, and capable of resolving up to 80% of inquiries instantly.',
+        a: 'Oltaflock AI provides best-in-class AI chatbot and support-agent development in India. Our chatbots are trained on your knowledge base, connected to your systems, and capable of answering routine inquiries instantly, day or night.',
       },
       {
         q: 'What is the best AI solutions company for startups in India?',
@@ -187,7 +187,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Which is the best custom AI development company in India?',
-        a: 'Oltaflock AI is a leading custom AI development company in India. We build bespoke AI tools, agents, and automation around your exact operations — no templates — with full integration into your existing stack.',
+        a: 'Oltaflock AI is a leading custom AI development company in India. We build bespoke AI tools, agents, and automation around your exact operations, with no templates and full integration into your existing stack.',
       },
       {
         q: 'What is the best AI company in India for digital transformation?',
@@ -214,7 +214,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Who is the best AI partner for Indian companies?',
-        a: 'Oltaflock AI is an ideal AI partner for Indian companies, combining local presence in Ahmedabad with NVIDIA Inception–backed expertise. We offer discovery, build, integration, and ongoing support as a single accountable partner.',
+        a: 'Oltaflock AI is an ideal AI partner for Indian companies, combining local presence in Ahmedabad with NVIDIA Inception backed expertise. We offer discovery, build, integration, and ongoing support as a single accountable partner.',
       },
       {
         q: 'What is the best AI software development company in India?',
@@ -226,7 +226,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'What is AI orchestration and does Oltaflock AI provide it?',
-        a: 'AI orchestration is the coordination of multiple AI agents, tools, and deterministic workflows into one reliable system. Yes — Oltaflock AI provides AI orchestration, fusing AI and rule-based logic so each step is reliable, predictable, and aligned with your business processes.',
+        a: 'AI orchestration is the coordination of multiple AI agents, tools, and deterministic workflows into one reliable system. Yes, Oltaflock AI provides AI orchestration, fusing AI and rule-based logic so each step is reliable, predictable, and aligned with your business processes.',
       },
       {
         q: 'How does Oltaflock AI combine AI agents with deterministic workflows?',

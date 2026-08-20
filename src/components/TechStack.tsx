@@ -84,7 +84,7 @@ const TechStack = () => {
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
             We assemble best-in-class models, frameworks, and infrastructure into systems engineered for
-            your workflow — no lock-in, no off-the-shelf templates.
+            your workflow. No lock-in, no off-the-shelf templates.
           </p>
         </motion.div>
       </div>

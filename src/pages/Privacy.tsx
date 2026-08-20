@@ -5,7 +5,7 @@ const Privacy = () => {
     <LegalPage
       title="Privacy Policy"
       updated="1 June 2026"
-      docTitle="Privacy Policy — Oltaflock AI"
+      docTitle="Privacy Policy | Oltaflock AI"
     >
       <p>
         This Privacy Policy explains how <strong>Oltaflock AI LLP</strong> ("Oltaflock", "we", "us",
@@ -19,22 +19,22 @@ const Privacy = () => {
       <h3>Information you provide</h3>
       <ul>
         <li>
-          <strong>Contact details</strong> — name, email address, phone number, company, and any
+          <strong>Contact details</strong>: name, email address, phone number, company, and any
           message you send through our contact form, email, or WhatsApp.
         </li>
         <li>
-          <strong>Project information</strong> — details you share so we can scope, build, or operate
+          <strong>Project information</strong>: details you share so we can scope, build, or operate
           an AI system or deliverable for you.
         </li>
       </ul>
       <h3>Information collected automatically</h3>
       <ul>
         <li>
-          <strong>Usage data</strong> — IP address, browser type, device, pages viewed, and referring
+          <strong>Usage data</strong>: IP address, browser type, device, pages viewed, and referring
           links, collected through standard server logs and analytics.
         </li>
         <li>
-          <strong>Cookies</strong> — small files used to keep the Site working and to understand
+          <strong>Cookies</strong>: small files used to keep the Site working and to understand
           aggregate traffic. You can disable cookies in your browser; some features may then break.
         </li>
       </ul>
@@ -53,7 +53,7 @@ const Privacy = () => {
 
       <h2>3. Service providers</h2>
       <p>
-        We share information only with trusted processors who help us run the business — for example
+        We share information only with trusted processors who help us run the business, for example
         email delivery (Resend), hosting and deployment (Vercel), analytics, scheduling, and payment
         providers. These parties may access data only to perform tasks on our behalf and are bound to
         protect it.

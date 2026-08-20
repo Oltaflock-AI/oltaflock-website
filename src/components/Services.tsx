@@ -29,7 +29,7 @@ const Services = () => {
           <p className="klabel mb-4">01 / Services</p>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold">What We Automate</h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            From workflow automation to custom AI systems — we handle business process automation,
+            From workflow automation to custom AI systems, we handle business process automation,
             CRM &amp; sales, and customer support. We take care of everything that slows you down.
           </p>
         </motion.div>
