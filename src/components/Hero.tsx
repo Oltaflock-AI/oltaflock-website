@@ -89,17 +89,22 @@ const Hero = () => {
           </Magnetic>
         </motion.div>
 
-        {/* NVIDIA Inception — credibility line */}
+        {/* NVIDIA Inception and Sarvam Startup Program — credibility line */}
         <motion.div
           custom={5}
           variants={fade}
           initial="hidden"
           animate="show"
-          className="mt-7 flex justify-center"
+          className="mt-7 flex flex-wrap justify-center items-center gap-x-4 gap-y-2"
         >
           <span className="inline-flex items-center gap-2.5 text-[13px] text-muted-foreground">
             <span className="h-4 w-4 rounded-[3px] bg-nvidia inline-block" aria-hidden />
             Proud member of <span className="text-foreground font-medium">NVIDIA&nbsp;Inception</span>
+          </span>
+          <span className="hidden sm:inline-block h-4 w-px bg-border" aria-hidden />
+          <span className="inline-flex items-center gap-2.5 text-[13px] text-muted-foreground">
+            <span className="h-4 w-4 rounded-[3px] bg-foreground inline-block" aria-hidden />
+            and the <span className="text-foreground font-medium">Sarvam&nbsp;Startup&nbsp;Program</span>
           </span>
         </motion.div>
 
