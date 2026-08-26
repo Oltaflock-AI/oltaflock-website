@@ -17,7 +17,7 @@ const CALCULATOR_URL = `${SITE}/automation-roi-calculator`;
 
 // Same slug the navbar and the calculator CTA use. Vercel exposes every project
 // env var to the function, so this stays in step with the buttons on the site.
-const CAL_SLUG = process.env.VITE_CALCOM_LINK || 'khush0030/oltaflock-ai-demo';
+const CAL_SLUG = process.env.VITE_CALCOM_LINK || 'khush0030/oltaflock-ai-discovery-call';
 const BOOK_CALL_URL = `https://cal.com/${CAL_SLUG}`;
 
 /** Guards against a payload large enough to be an attack rather than a form. */
