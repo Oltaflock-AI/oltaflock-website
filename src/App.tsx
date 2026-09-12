@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Analytics } from "@vercel/analytics/react";
 import CustomCursor from "./components/CustomCursor";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => {
           <CustomCursor />
           <ScrollToTop />
           <Outlet />
+          <Analytics />
         </TooltipProvider>
       </QueryClientProvider>
     </MotionConfig>
