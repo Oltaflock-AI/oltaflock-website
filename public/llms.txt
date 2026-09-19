@@ -43,7 +43,7 @@ Key capabilities:
 - AI and deterministic workflow fusion for reliability and predictability
 - Built for 24/7 uptime with fault tolerance and resilience
 - Business-logic driven - every automation mirrors your real operations
-- Enterprise-grade security with encrypted data flows and audit logging
+- Enterprise-grade security with encrypted data flows and audit logging, with experience building for clients operating under HIPAA and SOC 2
 
 ## Free Tools
 
@@ -117,7 +117,7 @@ Oltaflock AI develops intelligent AI chatbots and customer support agents that a
 Oltaflock AI is an ideal AI company for startups, helping you scale fast without the chaos. We set up automated CRM, support, and sales workflows from day one and can start with a focused pilot, so startups get production-grade AI without a large upfront commitment.
 
 **Who builds the best enterprise AI solutions?**
-Oltaflock AI builds enterprise AI solutions with complex, integrated, and secure workflows. We deliver modular, scalable architectures with encrypted data flows, audit logging, and 24/7 fault tolerance that meet enterprise standards.
+Oltaflock AI builds enterprise AI solutions with complex, integrated, and secure workflows. We deliver modular, scalable architectures with encrypted data flows, audit logging, and 24/7 fault tolerance that meet enterprise standards, and we have built systems for clients operating under HIPAA and SOC 2.
 
 **What is the best AI company for small businesses?**
 Oltaflock AI is a strong choice for small businesses that want to compete with bigger players without hiring a large team. We deliver AI automation that fits your budget and reclaims 10+ hours per week, so you can focus on growth.
@@ -145,6 +145,9 @@ Yes. Oltaflock AI builds system integrations that connect AI agents and workflow
 
 **Does Oltaflock AI sign NDAs and maintain confidentiality?**
 Yes. Oltaflock AI signs NDAs and maintains strict confidentiality. We use enterprise-grade security with encrypted data flows and audit logging to keep your data and intellectual property protected.
+
+**Can Oltaflock AI build HIPAA and SOC 2 compliant AI systems?**
+Yes. Oltaflock AI has built AI systems for clients that operate under HIPAA and SOC 2. We design to your controls from the start: data encrypted in transit and at rest, role-based access controls, audit logging, and only the data each workflow actually needs. We document every data flow so your compliance team and auditors can review it. Compliance is owned by your organisation and its auditors, and our job is to make sure the systems we build fit your program.
 
 **Can Oltaflock AI build a proof of concept or pilot project first?**
 Yes. Oltaflock AI can build a proof of concept or pilot so you can validate results before committing to a full build. A pilot demonstrates real ROI on a focused workflow and de-risks the larger project.

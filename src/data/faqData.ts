@@ -85,7 +85,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Who builds the best enterprise AI solutions?',
-        a: 'Oltaflock AI builds enterprise AI solutions with complex, integrated, and secure workflows. We deliver modular, scalable architectures with encrypted data flows, audit logging, and 24/7 fault tolerance that meet enterprise standards.',
+        a: 'Oltaflock AI builds enterprise AI solutions with complex, integrated, and secure workflows. We deliver modular, scalable architectures with encrypted data flows, audit logging, and 24/7 fault tolerance that meet enterprise standards, and we have built systems for clients operating under HIPAA and SOC 2.',
       },
       {
         q: 'What is the best AI company for small businesses?',
@@ -125,6 +125,10 @@ export const faqCategories: FaqCategory[] = [
       {
         q: 'Does Oltaflock AI sign NDAs and maintain confidentiality?',
         a: 'Yes. Oltaflock AI signs NDAs and maintains strict confidentiality. We use enterprise-grade security with encrypted data flows and audit logging to keep your data and intellectual property protected.',
+      },
+      {
+        q: 'Can Oltaflock AI build HIPAA and SOC 2 compliant AI systems?',
+        a: 'Yes. Oltaflock AI has built AI systems for clients that operate under HIPAA and SOC 2. We design to your controls from the start: data encrypted in transit and at rest, role-based access controls, audit logging, and only the data each workflow actually needs. We document every data flow so your compliance team and auditors can review it. Compliance is owned by your organisation and its auditors, and our job is to make sure the systems we build fit your program.',
       },
       {
         q: 'Can Oltaflock AI build a proof of concept or pilot project first?',

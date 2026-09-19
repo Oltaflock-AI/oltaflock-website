@@ -7,7 +7,7 @@ const features = [
   { icon: Shield, title: 'Production Reliability by Design', description: 'Built to run 24/7 without breaking. Engineered for uptime, fault tolerance, retries, monitoring, and resilience.' },
   { icon: Workflow, title: 'Business-Logic Driven Automation', description: 'Your workflows define the system, not templates. Every automation mirrors your real operations and edge cases.' },
   { icon: TrendingUp, title: 'Continuous Optimization Loop', description: 'Your system improves every week through monitoring, performance tuning, and iterative upgrades.' },
-  { icon: Lock, title: 'Security, Compliance & Data Integrity', description: 'Enterprise-grade security with encrypted data flows, access controls, and audit logging.' },
+  { icon: Lock, title: 'Security, Compliance & Data Integrity', description: 'Experience building for clients operating under HIPAA and SOC 2, with encrypted data flows, access controls, and audit logging built in.' },
 ];
 
 const WhyUs = () => {
