@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link as RouterLink } from 'react-router-dom';
 import {
   Bot, Workflow, Users, MessageSquare, Cog, BarChart3, Wrench, Link,
 } from 'lucide-react';
@@ -55,6 +56,21 @@ const Services = () => {
             </TiltCard>
           ))}
         </div>
+
+        <p className="mt-6 text-muted-foreground text-sm">
+          Popular right now:{' '}
+          <RouterLink to="/whatsapp-automation" className="text-foreground underline underline-offset-2 hover:text-primary">
+            WhatsApp automation
+          </RouterLink>{' '}
+          for Indian businesses, and{' '}
+          <RouterLink
+            to="/ai-automation-company-ahmedabad"
+            className="text-foreground underline underline-offset-2 hover:text-primary"
+          >
+            AI automation in Ahmedabad
+          </RouterLink>
+          .
+        </p>
       </div>
     </section>
   );

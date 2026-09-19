@@ -67,6 +67,12 @@ const Footer = () => {
         </div>
 
         <div className="mt-4 flex flex-wrap sm:justify-end gap-x-5 gap-y-2">
+          <Link to="/whatsapp-automation" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
+            WhatsApp Automation
+          </Link>
+          <Link to="/ai-automation-company-ahmedabad" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
+            AI Automation in Ahmedabad
+          </Link>
           <Link to="/automation-roi-calculator" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
             ROI Calculator
           </Link>

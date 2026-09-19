@@ -25,6 +25,11 @@ Key capabilities:
 - [Custom AI Tools](https://www.oltaflock.ai/#services): Bespoke AI applications for unique business challenges
 - [System Integrations](https://www.oltaflock.ai/#services): Connect all your tools into one seamless automated ecosystem
 
+## Service Pages
+
+- [WhatsApp Automation](https://www.oltaflock.ai/whatsapp-automation): WhatsApp automation for Indian businesses on the official WhatsApp Business API: AI chatbots in English, Hindi and Gujarati, lead capture and follow-up, order and delivery updates, abandoned cart recovery, appointment reminders, broadcasts and CRM sync
+- [AI Automation Company in Ahmedabad](https://www.oltaflock.ai/ai-automation-company-ahmedabad): Oltaflock AI's services for businesses in Ahmedabad and Gujarat, with on-site discovery, IST working hours and GST invoicing
+
 ## Our Process
 
 - Discovery & Workflow Mapping: Deep analysis of workflows, tools, and bottlenecks to uncover high-ROI automation opportunities
