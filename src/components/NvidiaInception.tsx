@@ -71,7 +71,7 @@ const NvidiaInception = () => {
   return (
     <section id="nvidia" className="py-12 sm:py-14 scroll-mt-20 border-t border-border">
       <div className="section-container">
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
@@ -80,7 +80,7 @@ const NvidiaInception = () => {
           style={{ color: 'hsl(var(--nvidia))' }}
         >
           Backed by
-        </motion.h1>
+        </motion.h2>
 
         <div className="grid gap-4 lg:grid-cols-2">
           {programs.map((program, index) => (

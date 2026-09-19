@@ -21,15 +21,15 @@ const Index = () => {
         <title>Custom AI Automation Solutions | Oltaflock AI</title>
         <meta
           name="description"
-          content="Custom AI automation systems that eliminate repetitive work and unlock growth. Explore our AI agents and workflow automation. Schedule a free consultation today."
+          content="Custom AI automation systems that eliminate repetitive work and unlock growth. Explore our AI agents and workflow automation. Book a free consultation."
         />
-        <link rel="canonical" href="https://oltaflock.ai/" />
+        <link rel="canonical" href="https://www.oltaflock.ai/" />
         <meta property="og:title" content="Custom AI Automation Solutions | Oltaflock AI" />
         <meta
           property="og:description"
           content="Stop working IN your business. Start working ON it. Custom AI automation systems tailored to your needs."
         />
-        <meta property="og:url" content="https://oltaflock.ai/" />
+        <meta property="og:url" content="https://www.oltaflock.ai/" />
         <meta name="twitter:title" content="Custom AI Automation Solutions | Oltaflock AI" />
         <meta
           name="twitter:description"

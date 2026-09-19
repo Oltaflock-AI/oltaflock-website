@@ -6,11 +6,13 @@ const Privacy = () => {
       title="Privacy Policy"
       updated="1 June 2026"
       docTitle="Privacy Policy | Oltaflock AI"
+      description="How Oltaflock AI collects, uses and protects your information when you visit our site or use our AI automation services."
+      path="/privacy"
     >
       <p>
         This Privacy Policy explains how <strong>Oltaflock AI LLP</strong> ("Oltaflock", "we", "us",
         or "our") collects, uses, and protects information when you visit{' '}
-        <a href="https://oltaflock.ai">oltaflock.ai</a> (the "Site") or engage our AI automation
+        <a href="https://www.oltaflock.ai">oltaflock.ai</a> (the "Site") or engage our AI automation
         services (the "Services"). By using the Site or Services, you agree to the practices
         described here.
       </p>

@@ -7,11 +7,11 @@ import Footer from '@/components/Footer';
 import { Reveal } from '@/components/ui/reveal';
 import LeakCalculator from '@/components/calculator/LeakCalculator';
 
-const SITE = 'https://oltaflock.ai';
+const SITE = 'https://www.oltaflock.ai';
 const PAGE_URL = `${SITE}/automation-roi-calculator`;
-const TITLE = 'Automation ROI Calculator | How Much Manual Work Costs You | Oltaflock AI';
+const TITLE = 'Automation ROI Calculator: Manual Work Cost | Oltaflock AI';
 const DESC =
-  'Free automation ROI calculator. Find out how much your business spends every year on manual work an AI agent or workflow could do — lead follow-up, CRM data entry, support replies, reporting and more.';
+  'Free automation ROI calculator. See what manual work like lead follow-up, CRM data entry, support replies and reporting costs your business each year.';
 
 const faqs = [
   {

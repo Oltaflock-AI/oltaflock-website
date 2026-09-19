@@ -7,11 +7,11 @@ import Footer from '@/components/Footer';
 import { Reveal } from '@/components/ui/reveal';
 import { faqCategories, allFaqs } from '@/data/faqData';
 
-const SITE = 'https://oltaflock.ai';
+const SITE = 'https://www.oltaflock.ai';
 const PAGE_URL = `${SITE}/faq`;
-const TITLE = 'FAQ | Oltaflock AI | AI Automation & AI Agent Development (India)';
+const TITLE = 'FAQ | AI Automation & AI Agent Development | Oltaflock AI';
 const DESC =
-  'Answers about Oltaflock AI, a custom AI automation and AI agent development company in Ahmedabad, India: services, pricing, timelines, AI workflows, and orchestration.';
+  'Answers about Oltaflock AI, an AI automation and AI agent development company in Ahmedabad, India: services, pricing, timelines and workflows.';
 
 // FAQPage structured data — emitted into the prerendered HTML for rich results.
 const faqLd = {

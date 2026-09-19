@@ -6,9 +6,11 @@ const Terms = () => {
       title="Terms & Conditions"
       updated="1 June 2026"
       docTitle="Terms & Conditions | Oltaflock AI"
+      description="The terms and conditions that govern your use of the Oltaflock AI website and our AI automation services."
+      path="/terms"
     >
       <p>
-        These Terms &amp; Conditions ("Terms") govern your use of <a href="https://oltaflock.ai">oltaflock.ai</a>{' '}
+        These Terms &amp; Conditions ("Terms") govern your use of <a href="https://www.oltaflock.ai">oltaflock.ai</a>{' '}
         (the "Site") and the AI automation services (the "Services") provided by{' '}
         <strong>Oltaflock AI LLP</strong> ("Oltaflock", "we", "us", or "our"). By accessing the Site or
         engaging our Services, you agree to these Terms.

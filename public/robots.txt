@@ -40,4 +40,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://oltaflock.ai/sitemap.xml
+Sitemap: https://www.oltaflock.ai/sitemap.xml

@@ -11,14 +11,18 @@ type LegalPageProps = {
   title: string;
   updated: string;
   docTitle: string;
+  description: string;
+  path: string;
   children: ReactNode;
 };
 
-const LegalPage = ({ title, updated, docTitle, children }: LegalPageProps) => {
+const LegalPage = ({ title, updated, docTitle, description, path, children }: LegalPageProps) => {
   return (
     <div className="min-h-screen bg-background">
       <Head>
         <title>{docTitle}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={`https://www.oltaflock.ai${path}`} />
       </Head>
       <ScrollProgress />
       <Navbar />

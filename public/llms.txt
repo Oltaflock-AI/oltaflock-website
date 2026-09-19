@@ -16,14 +16,14 @@ Key capabilities:
 
 ## Services
 
-- [AI Agents](https://oltaflock.ai/#services): Intelligent agents that handle complex tasks, make decisions, and operate autonomously around the clock
-- [Business Process Automation](https://oltaflock.ai/#services): End-to-end automation of repetitive workflows to reduce errors and save time
-- [CRM & Sales Automation](https://oltaflock.ai/#services): Automated lead nurturing, follow-ups, and pipeline management
-- [Customer Support Automation](https://oltaflock.ai/#services): AI-powered support systems that resolve issues instantly and escalate when needed
-- [Internal Workflow Automation](https://oltaflock.ai/#services): Streamline approvals, onboarding, and reporting
-- [Data & Reporting Automation](https://oltaflock.ai/#services): Real-time dashboards and automated reports
-- [Custom AI Tools](https://oltaflock.ai/#services): Bespoke AI applications for unique business challenges
-- [System Integrations](https://oltaflock.ai/#services): Connect all your tools into one seamless automated ecosystem
+- [AI Agents](https://www.oltaflock.ai/#services): Intelligent agents that handle complex tasks, make decisions, and operate autonomously around the clock
+- [Business Process Automation](https://www.oltaflock.ai/#services): End-to-end automation of repetitive workflows to reduce errors and save time
+- [CRM & Sales Automation](https://www.oltaflock.ai/#services): Automated lead nurturing, follow-ups, and pipeline management
+- [Customer Support Automation](https://www.oltaflock.ai/#services): AI-powered support systems that resolve issues instantly and escalate when needed
+- [Internal Workflow Automation](https://www.oltaflock.ai/#services): Streamline approvals, onboarding, and reporting
+- [Data & Reporting Automation](https://www.oltaflock.ai/#services): Real-time dashboards and automated reports
+- [Custom AI Tools](https://www.oltaflock.ai/#services): Bespoke AI applications for unique business challenges
+- [System Integrations](https://www.oltaflock.ai/#services): Connect all your tools into one seamless automated ecosystem
 
 ## Our Process
 
@@ -43,21 +43,21 @@ Key capabilities:
 
 ## Free Tools
 
-- [Automation ROI Calculator](https://oltaflock.ai/automation-roi-calculator): Free calculator that estimates what manual work costs a business each year. Select the tasks a team does by hand — lead follow-up, CRM data entry, repeat support replies, manual reporting, quotes and invoices, approvals and onboarding, copy-pasting between tools, lead qualification — set hours per week, people involved, and hourly staff cost in USD or INR. Annual cost is hours x people x 52 weeks x hourly cost, and only the automatable share of each task counts toward the total. No signup required and the full per-task breakdown is shown on the page.
+- [Automation ROI Calculator](https://www.oltaflock.ai/automation-roi-calculator): Free calculator that estimates what manual work costs a business each year. Select the tasks a team does by hand — lead follow-up, CRM data entry, repeat support replies, manual reporting, quotes and invoices, approvals and onboarding, copy-pasting between tools, lead qualification — set hours per week, people involved, and hourly staff cost in USD or INR. Annual cost is hours x people x 52 weeks x hourly cost, and only the automatable share of each task counts toward the total. No signup required and the full per-task breakdown is shown on the page.
 
 ## Getting Started
 
-- [Contact Us](https://oltaflock.ai/#send-message): Send a message to get a personalised automation assessment, custom strategy, and ROI projection
-- [See What We Automate](https://oltaflock.ai/#services): Explore our automation capabilities
+- [Contact Us](https://www.oltaflock.ai/#send-message): Send a message to get a personalised automation assessment, custom strategy, and ROI projection
+- [See What We Automate](https://www.oltaflock.ai/#services): Explore our automation capabilities
 
 ## Company
 
-- [Oltaflock AI](https://oltaflock.ai): Home
+- [Oltaflock AI](https://www.oltaflock.ai): Home
 - Contact: admin@oltaflock.ai
 
 ## Frequently Asked Questions
 
-Full FAQ: https://oltaflock.ai/faq
+Full FAQ: https://www.oltaflock.ai/faq
 
 ### About Oltaflock AI
 

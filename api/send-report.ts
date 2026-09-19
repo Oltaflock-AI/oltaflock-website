@@ -12,7 +12,7 @@ import {
 import type { CurrencyCode, Inputs, Result } from '../src/lib/leakModel.js';
 
 const TO_EMAIL = 'admin@oltaflock.ai';
-const SITE = 'https://oltaflock.ai';
+const SITE = 'https://www.oltaflock.ai';
 const CALCULATOR_URL = `${SITE}/automation-roi-calculator`;
 
 // Same slug the navbar and the calculator CTA use. Vercel exposes every project
