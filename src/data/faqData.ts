@@ -14,7 +14,7 @@ export const faqCategories: FaqCategory[] = [
     items: [
       {
         q: 'What is Oltaflock AI?',
-        a: 'Oltaflock AI is a remote-first custom AI automation agency working with businesses in the United States, United Kingdom, Europe and Australia. We build AI agents, business process automation, and end-to-end AI systems that eliminate repetitive work and help businesses scale without adding headcount. Oltaflock AI is a proud member of NVIDIA Inception.',
+        a: 'Oltaflock AI is a remote-first custom AI automation agency for businesses in the United States, United Kingdom, Europe and Australia. We build AI agents, business process automation, and end-to-end AI systems that eliminate repetitive work and help businesses scale without adding headcount. Oltaflock AI is a proud member of NVIDIA Inception.',
       },
       {
         q: 'Who is Oltaflock AI?',
@@ -136,7 +136,7 @@ export const faqCategories: FaqCategory[] = [
       },
       {
         q: 'Does Oltaflock AI work with clients in the US, UK, Europe and Australia?',
-        a: 'Yes. Oltaflock AI is a fully remote team and most of our work is with clients in the United States, United Kingdom, Europe and Australia. We schedule calls in your time zone, share written progress updates every week, and work in your tools, whether that is Slack, Teams, Notion or Jira.',
+        a: 'Yes. Oltaflock AI is a fully remote team set up to work with clients in the United States, United Kingdom, Europe and Australia. We schedule calls in your time zone, share written progress updates every week, and work in your tools, whether that is Slack, Teams, Notion or Jira.',
       },
       {
         q: 'What makes Oltaflock AI the right choice for my AI project?',
