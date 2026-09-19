@@ -24,16 +24,15 @@ type ServicePageProps = {
   // Plain-text service name and type, used in the Service structured data.
   serviceName: string;
   serviceType: string;
-  areaServed: string;
+  areaServed: string[];
   offerings: { heading: string; intro: string; items: Item[] };
   steps: { heading: string; items: Item[] };
   reasons: { heading: string; items: Item[] };
   faqs: Faq[];
   related: { to: string; label: string }[];
-  afterHero?: ReactNode;
 };
 
-// Shared layout for keyword-targeted service and location landing pages. Every
+// Shared layout for keyword-targeted service landing pages. Every
 // page gets a Service, BreadcrumbList and FAQPage block in its prerendered HTML.
 const ServicePage = ({
   path,
@@ -50,7 +49,6 @@ const ServicePage = ({
   reasons,
   faqs,
   related,
-  afterHero,
 }: ServicePageProps) => {
   const pageUrl = `${SITE}${path}`;
 
@@ -62,19 +60,12 @@ const ServicePage = ({
     serviceType,
     url: pageUrl,
     description,
-    areaServed,
+    areaServed: areaServed.map((name) => ({ '@type': 'Country', name })),
     provider: {
       '@type': 'ProfessionalService',
       name: 'Oltaflock AI',
       url: SITE,
       email: 'admin@oltaflock.ai',
-      telephone: '+91-95895-94181',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Ahmedabad',
-        addressRegion: 'Gujarat',
-        addressCountry: 'IN',
-      },
     },
   };
 
@@ -139,8 +130,6 @@ const ServicePage = ({
             </div>
           </Reveal>
         </section>
-
-        {afterHero}
 
         {/* Offerings */}
         <section className="section-container mt-16 sm:mt-24">

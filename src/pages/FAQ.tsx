@@ -11,7 +11,7 @@ const SITE = 'https://www.oltaflock.ai';
 const PAGE_URL = `${SITE}/faq`;
 const TITLE = 'FAQ | AI Automation & AI Agent Development | Oltaflock AI';
 const DESC =
-  'Answers about Oltaflock AI, an AI automation and AI agent development company in Ahmedabad, India: services, pricing, timelines and workflows.';
+  'Answers about Oltaflock AI, a remote-first AI automation and AI agent development company: services, pricing, timelines, security and workflows.';
 
 // FAQPage structured data — emitted into the prerendered HTML for rich results.
 const faqLd = {
@@ -53,8 +53,8 @@ const FAQ = () => {
               Frequently asked <span className="text-primary">questions.</span>
             </h1>
             <p className="mt-4 text-muted-foreground text-lg">
-              Everything about Oltaflock AI, a custom AI automation and AI agent development company based
-              in Ahmedabad, India. Can&apos;t find your answer?{' '}
+              Everything about Oltaflock AI, a remote-first custom AI automation and AI agent development
+              company. Can&apos;t find your answer?{' '}
               <a href="/#send-message" className="text-foreground underline underline-offset-2 hover:text-primary">
                 Get in touch
               </a>

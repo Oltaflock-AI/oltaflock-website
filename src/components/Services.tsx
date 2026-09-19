@@ -58,16 +58,9 @@ const Services = () => {
         </div>
 
         <p className="mt-6 text-muted-foreground text-sm">
-          Popular right now:{' '}
+          Talking to customers on WhatsApp? See our{' '}
           <RouterLink to="/whatsapp-automation" className="text-foreground underline underline-offset-2 hover:text-primary">
-            WhatsApp automation
-          </RouterLink>{' '}
-          for Indian businesses, and{' '}
-          <RouterLink
-            to="/ai-automation-company-ahmedabad"
-            className="text-foreground underline underline-offset-2 hover:text-primary"
-          >
-            AI automation in Ahmedabad
+            WhatsApp Business API automation
           </RouterLink>
           .
         </p>

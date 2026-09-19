@@ -22,10 +22,6 @@ export const routes: RouteRecord[] = [
         path: 'whatsapp-automation',
         lazy: lazyDefault(() => import('./pages/WhatsAppAutomation')),
       },
-      {
-        path: 'ai-automation-company-ahmedabad',
-        lazy: lazyDefault(() => import('./pages/Ahmedabad')),
-      },
       { path: 'privacy', lazy: lazyDefault(() => import('./pages/Privacy')) },
       { path: 'terms', lazy: lazyDefault(() => import('./pages/Terms')) },
       { path: '*', lazy: lazyDefault(() => import('./pages/NotFound')) },

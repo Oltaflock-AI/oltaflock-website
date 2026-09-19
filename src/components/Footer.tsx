@@ -70,9 +70,6 @@ const Footer = () => {
           <Link to="/whatsapp-automation" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
             WhatsApp Automation
           </Link>
-          <Link to="/ai-automation-company-ahmedabad" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
-            AI Automation in Ahmedabad
-          </Link>
           <Link to="/automation-roi-calculator" className="text-faint text-[12.5px] font-mono hover:text-foreground transition-colors">
             ROI Calculator
           </Link>

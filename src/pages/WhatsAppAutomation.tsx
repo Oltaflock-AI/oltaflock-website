@@ -3,69 +3,74 @@ import ServicePage from '@/components/ServicePage';
 const faqs = [
   {
     q: 'What is WhatsApp automation?',
-    a: 'WhatsApp automation means using software to send, receive and act on WhatsApp messages without a person typing each reply. It covers AI chatbots that answer customer questions, automatic order and appointment updates, lead capture and follow-up, and syncing every conversation into your CRM. Oltaflock AI builds these systems on the official WhatsApp Business Platform.',
+    a: 'WhatsApp automation means using software to send, receive and act on WhatsApp messages without a person typing each reply. It covers AI agents that answer customer questions, automatic order and booking updates, lead capture and follow-up, and syncing every conversation into your CRM or help desk. Oltaflock AI builds these systems on the official WhatsApp Business Platform from Meta.',
   },
   {
     q: 'Will my WhatsApp number get banned if I automate it?',
-    a: 'Not when it is done properly. We build only on the official WhatsApp Business Platform (Cloud API) from Meta, not on unofficial tools that scrape WhatsApp Web, which are what usually get numbers banned. We also set up opt-in collection and approved message templates so your number keeps a healthy quality rating.',
+    a: 'Not when it is done properly. We build only on the official WhatsApp Business Platform (Cloud API), not on unofficial tools that scrape WhatsApp Web, which are what usually get numbers banned. We also set up opt-in collection and approved message templates so your number keeps a healthy quality rating.',
   },
   {
     q: 'What is the difference between the WhatsApp Business app and the WhatsApp Business API?',
-    a: 'The WhatsApp Business app is a phone app for one or a few people to reply manually. The WhatsApp Business API (WhatsApp Business Platform) connects WhatsApp to software, so you can run AI chatbots, send automated notifications, use a shared team inbox and integrate with your CRM, store or ERP. Automation at scale needs the API.',
+    a: 'The WhatsApp Business app is a phone app for one or a few people to reply manually. The WhatsApp Business API (WhatsApp Business Platform) connects WhatsApp to software, so you can run AI agents, send automated notifications, use a shared team inbox and integrate with your CRM, store or help desk. Automation at scale needs the API.',
   },
   {
-    q: 'How much does WhatsApp automation cost in India?',
-    a: 'There are two parts. Meta charges for certain business-initiated template messages based on the message category (marketing, utility or authentication) and the recipient country, and customer-initiated service conversations are largely free. Then there is the one-time cost to design and build your automation, which depends on scope. After a free discovery call we send a fixed quote and an ROI estimate.',
+    q: 'How much does WhatsApp Business API automation cost?',
+    a: 'There are two parts. Meta charges for certain business-initiated template messages based on the message category (marketing, utility or authentication) and the recipient country, while replies inside a customer-initiated conversation are largely free. Then there is the one-time cost to design and build your automation, which depends on scope. After a free discovery call we send a fixed quote and an ROI estimate.',
   },
   {
-    q: 'Can the WhatsApp chatbot reply in Hindi or Gujarati?',
-    a: 'Yes. The AI agents we build understand and reply in English, Hindi, Gujarati and other Indian languages, including mixed Hinglish messages. The bot answers from your own product, pricing and policy information and hands the chat to a human when it should.',
+    q: 'Is WhatsApp automation GDPR friendly?',
+    a: 'It can be, and we design for it. Every flow we build collects explicit opt-in before sending business-initiated messages, gives customers a clear way to opt out, and stores only the data the workflow needs in your own CRM or database. Messages on the WhatsApp Business Platform are also covered by Meta’s business data processing terms.',
   },
   {
-    q: 'Can WhatsApp automation connect to Shopify, Zoho, HubSpot or Google Sheets?',
-    a: 'Yes. We connect WhatsApp to the tools you already use, including Shopify, WooCommerce, Zoho CRM, HubSpot, Google Sheets, payment gateways and custom databases, so orders, leads and conversations sync automatically in both directions.',
+    q: 'Which tools can WhatsApp automation connect to?',
+    a: 'We connect WhatsApp to the tools you already use, including Shopify, HubSpot, Salesforce, Zendesk, Intercom, Google Sheets, Airtable, Stripe and custom databases, so orders, leads and conversations sync automatically in both directions.',
+  },
+  {
+    q: 'Can the WhatsApp agent reply in other languages?',
+    a: 'Yes. The AI agents we build detect the customer’s language and reply in it, including English, Spanish, French, German, Portuguese and Arabic, while answering only from your approved product, pricing and policy information.',
   },
   {
     q: 'How long does it take to set up WhatsApp automation?',
-    a: 'Business verification and number setup with Meta usually takes a few days. A focused automation such as an AI support bot or order-update flow is typically live within 4 to 8 weeks, including testing. We give you a clear timeline after the discovery call.',
+    a: 'Meta business verification and number setup usually takes a few days. A focused automation such as an AI support agent or order-update flow is typically live within 4 to 8 weeks, including testing. We give you a clear timeline after the discovery call.',
   },
 ];
 
 const WhatsAppAutomation = () => (
   <ServicePage
     path="/whatsapp-automation"
-    title="WhatsApp Automation Services in India | Oltaflock AI"
-    description="WhatsApp automation for Indian businesses: AI chatbots, lead follow-up, order updates and CRM sync on the official WhatsApp Business API. Book a free call."
+    title="WhatsApp Business API Automation Agency | Oltaflock AI"
+    description="WhatsApp Business API automation: AI agents, lead follow-up, order updates and CRM sync for businesses in the UK, Europe, Australia and the US. Book a call."
     label="WhatsApp Automation"
     heading={
       <>
-        WhatsApp automation for <span className="text-primary">Indian businesses.</span>
+        WhatsApp automation that <span className="text-primary">answers every customer.</span>
       </>
     }
     intro={
       <>
         <p>
           Your customers already message you on WhatsApp. Oltaflock AI turns that inbox into a system that
-          answers questions instantly, follows up on every lead, sends order and appointment updates, and
-          logs every conversation in your CRM without anyone copy-pasting.
+          answers questions instantly, follows up on every lead, sends order and booking updates, and logs
+          every conversation in your CRM without anyone copy-pasting.
         </p>
         <p>
-          We build on the official WhatsApp Business Platform from Meta, so your number stays safe and your
-          automation scales from ten chats a day to thousands.
+          We build on the official WhatsApp Business Platform from Meta for businesses in the UK, Europe,
+          Australia and the US, so your number stays safe and your automation scales from ten chats a day to
+          thousands.
         </p>
       </>
     }
     serviceName="WhatsApp Automation"
-    serviceType="WhatsApp Business API automation and AI chatbot development"
-    areaServed="India"
+    serviceType="WhatsApp Business API automation and AI agent development"
+    areaServed={['United Kingdom', 'European Union', 'Australia', 'United States']}
     offerings={{
       heading: 'What we automate on WhatsApp',
       intro: 'Every build is custom to how your business actually sells and supports customers.',
       items: [
         {
-          title: 'AI WhatsApp chatbot',
+          title: 'AI WhatsApp agent',
           description:
-            'Answers product, pricing, stock and policy questions around the clock from your own data, and hands off to your team when a human is needed.',
+            'Answers product, pricing, availability and policy questions around the clock from your own data, and hands off to your team when a human is needed.',
         },
         {
           title: 'Lead capture and follow-up',
@@ -75,22 +80,22 @@ const WhatsAppAutomation = () => (
         {
           title: 'Order and delivery updates',
           description:
-            'Order confirmations, COD verification, shipping and delivery alerts sent automatically from Shopify, WooCommerce or your own system.',
+            'Order confirmations, shipping and delivery alerts and returns updates sent automatically from Shopify, WooCommerce or your own system.',
         },
         {
           title: 'Abandoned cart recovery',
           description:
-            'Timely, personalised WhatsApp reminders for shoppers who left items in their cart, with a direct link back to checkout.',
+            'Timely, personalised WhatsApp reminders for opted-in shoppers who left items in their cart, with a direct link back to checkout.',
         },
         {
-          title: 'Appointment booking and reminders',
+          title: 'Bookings and reminders',
           description:
-            'Customers book, reschedule and get reminders on WhatsApp, which cuts no-shows for clinics, salons, coaching and service businesses.',
+            'Customers book, reschedule and get reminders on WhatsApp, which cuts no-shows for clinics, salons, studios and service businesses.',
         },
         {
           title: 'Broadcasts and CRM sync',
           description:
-            'Segmented campaigns to opted-in customers, with every chat, lead and order synced to Zoho, HubSpot, Google Sheets or your CRM.',
+            'Segmented campaigns to opted-in customers, with every chat, lead and order synced to HubSpot, Salesforce, Zendesk or your CRM.',
         },
       ],
     }}
@@ -100,7 +105,7 @@ const WhatsAppAutomation = () => (
         {
           title: 'Discovery and workflow mapping',
           description:
-            'We look at the questions you get, how leads and orders flow today, and where your team loses time, then pick the automations with the best return.',
+            'On a video call we look at the questions you get, how leads and orders flow today, and where your team loses time, then pick the automations with the best return.',
         },
         {
           title: 'WhatsApp Business Platform setup',
@@ -110,7 +115,7 @@ const WhatsAppAutomation = () => (
         {
           title: 'Build the flows and AI agent',
           description:
-            'We build the conversation flows, train the AI on your catalogue and policies, and connect WhatsApp to your store, CRM and internal tools.',
+            'We build the conversation flows, train the AI on your catalogue and policies, and connect WhatsApp to your store, CRM and help desk.',
         },
         {
           title: 'Test, launch and improve',
@@ -133,19 +138,19 @@ const WhatsAppAutomation = () => (
         },
         {
           title: 'Built around your stack',
-          description: 'We integrate with the store, CRM and sheets you already use instead of forcing a new platform.',
+          description:
+            'We integrate with the store, CRM and help desk you already use instead of forcing a new platform.',
         },
         {
-          title: 'Local team, Indian languages',
+          title: 'Remote team that fits your schedule',
           description:
-            'A team in Ahmedabad that works in IST and builds bots that handle English, Hindi, Gujarati and Hinglish.',
+            'Calls in your time zone, weekly written updates, and work tracked in your own Slack, Teams or Notion.',
         },
       ],
     }}
     faqs={faqs}
     related={[
       { to: '/automation-roi-calculator', label: 'Calculate what manual work costs you' },
-      { to: '/ai-automation-company-ahmedabad', label: 'AI automation in Ahmedabad' },
       { to: '/faq', label: 'Read the full FAQ' },
     ]}
   />
